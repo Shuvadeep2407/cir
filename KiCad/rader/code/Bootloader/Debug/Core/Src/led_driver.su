@@ -1,0 +1,9 @@
+../Core/Src/led_driver.c:23:6:LED_Init	8	static
+../Core/Src/led_driver.c:41:6:LED_On	16	static
+../Core/Src/led_driver.c:52:6:LED_Off	16	static
+../Core/Src/led_driver.c:63:6:LED_Toggle	16	static
+../Core/Src/led_driver.c:74:6:LED_Blink	24	static
+../Core/Src/led_driver.c:84:6:LED_SetPattern	16	static
+../Core/Src/led_driver.c:90:6:LED_Update	24	static
+../Core/Src/led_driver.c:138:6:LED_Error	24	static
+../Core/Src/led_driver.c:150:6:LED_BootloaderIndicator	16	static

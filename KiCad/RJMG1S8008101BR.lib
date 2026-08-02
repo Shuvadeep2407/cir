@@ -1,0 +1,31 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model RJMG1S8008101BR
+#/17520190/555270/2.50/10/3/Connector
+DEF RJMG1S8008101BR J 0 30 Y Y 1 F N
+F0 "J" 1050 300 50 H V L CNN
+F1 "RJMG1S8008101BR" 1050 200 50 H V L CNN
+F2 "RJMG1S8008101BR" 1050 100 50 H I L CNN
+F3 "https://cdn.amphenol-cs.com/media/wysiwyg/files/documentation/datasheet/inputoutput/io_rjmag_1x1.pdf" 1050 0 50 H I L CNN
+F4 "Modular Connectors / Ethernet Connectors RJMG 1X1 10/100, RA" 1050 -100 50 H I L CNN "Description"
+F5 "13.75" 1050 -200 50 H I L CNN "Height"
+F6 "523-RJMG1S8008101BR" 1050 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Amphenol-Commercial-Products/RJMG1S8008101BR?qs=81r%252BiQLm7BSfjqSFbHOS2A%3D%3D" 1050 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Amphenol" 1050 -500 50 H I L CNN "Manufacturer_Name"
+F9 "RJMG1S8008101BR" 1050 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X TD+ P1 0 0 200 R 50 50 0 0 P
+X TD- P2 0 -100 200 R 50 50 0 0 P
+X TCT_1 P3 0 -200 200 R 50 50 0 0 P
+X NA_1 P4 0 -300 200 R 50 50 0 0 P
+X NA_2 P5 0 -400 200 R 50 50 0 0 P
+X TCT_2 P6 1200 0 200 L 50 50 0 0 P
+X RD+ P7 1200 -100 200 L 50 50 0 0 P
+X RD- P8 1200 -200 200 L 50 50 0 0 P
+X MH3 MH3 1200 -300 200 L 50 50 0 0 P
+X MH4 MH4 1200 -400 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1000 100 1000 -500 200 -500 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

@@ -1,0 +1,18 @@
+Qty,Total buy Qty,Value,Footprint
+1,7,TCAN3413DR,SOIC127P600X175-8N
+1,7,120R,Resistor_SMD:R_0603_1608Metric
+1,7,100K,Resistor_SMD:R_0603_1608Metric
+5,35,1K,Resistor_SMD:R_0603_1608Metric
+1,7,26.1K,Resistor_SMD:R_0603_1608Metric
+1,7,4k7,Resistor_SMD:R_0603_1608Metric
+6,42,10K,Resistor_SMD:R_0603_1608Metric
+1,7,EUP3484A,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm
+1,7,12W,OptoDevice:R_LDR_7x6mm_P5.1mm_Vertical
+5,35,LED,LED_SMD:LED_0603_1608Metric
+1,7,STM32C092CCT6,IC_LQFP48_5B_STM
+1,7,3v3,Diode_SMD:D_SMB
+1,7,ss24,Diode_SMD:D_SMB
+1,7,10µH,Capacitor_THT:CP_Radial_Tantal_D4.5mm_P2.50mm
+1,7,33p,Capacitor_SMD:C_0603_1608Metric
+1,7,10p,Capacitor_SMD:C_0603_1608Metric
+7,49,100nF,Capacitor_SMD:C_0603_1608Metric

@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TCAN3413DR
+D 1/1 Transceiver Half CANbus 8-SOIC
+K
+F https://www.ti.com/lit/ds/symlink/tcan3413.pdf?ts=1704463166829&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252Fde-de%252FTCAN3413
+$ENDCMP
+#
+#End Doc Library

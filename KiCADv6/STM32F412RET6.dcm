@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP STM32F412RET6
+D Arm-Cortex-M4 32b MCU+FPU, 125 DMIPS, 1MB Flash, 256KB RAM, USB OTG FS, 17 TIMs, 1 ADC, 17 comm. interfaces
+K
+F https://www.st.com/resource/en/datasheet/stm32f412ce.pdf
+$ENDCMP
+#
+#End Doc Library
