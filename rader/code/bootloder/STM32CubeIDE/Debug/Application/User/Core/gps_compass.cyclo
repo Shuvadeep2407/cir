@@ -1,0 +1,16 @@
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/SENSORS/gps_compass.c:39:14:GPS_ParseCoord	4
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/SENSORS/gps_compass.c:79:13:GPS_ParseGGA	14
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/SENSORS/gps_compass.c:145:13:GPS_ParseRMC	14
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/SENSORS/gps_compass.c:203:6:GPS_Init	1
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/SENSORS/gps_compass.c:215:6:GPS_FeedByte	6
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/SENSORS/gps_compass.c:247:6:GPS_Process	5
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/SENSORS/gps_compass.c:277:9:GPS_GetData	2
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/SENSORS/gps_compass.c:293:9:GPS_IsValid	1
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/SENSORS/gps_compass.c:302:16:Compass_WriteReg	1
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/SENSORS/gps_compass.c:308:16:Compass_ReadReg	1
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/SENSORS/gps_compass.c:314:16:Compass_ReadRegs	1
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/SENSORS/gps_compass.c:328:9:Compass_Init	2
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/SENSORS/gps_compass.c:355:9:Compass_Read	3
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/SENSORS/gps_compass.c:387:7:Compass_ComputeHeading	4
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/SENSORS/gps_compass.c:421:9:Sensors_Init	1
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/SENSORS/gps_compass.c:434:6:Sensors_Update	2

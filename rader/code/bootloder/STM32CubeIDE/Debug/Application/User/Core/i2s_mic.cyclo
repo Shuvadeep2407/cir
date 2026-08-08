@@ -1,0 +1,8 @@
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/AUDIO/i2s_mic.c:28:17:I2S_Mic_ISqrt	4
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/AUDIO/i2s_mic.c:75:10:I2S_Mic_ComputeRms	3
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/AUDIO/i2s_mic.c:106:6:I2S_Mic_ProcessBlock	3
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/AUDIO/i2s_mic.c:141:6:I2S_Mic_DmaHandler	7
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/AUDIO/i2s_mic.c:175:9:I2S_Mic_Init	3
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/AUDIO/i2s_mic.c:216:6:I2S_Mic_Start	1
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/AUDIO/i2s_mic.c:224:6:I2S_Mic_Stop	1
+E:/drone/c_uas/drone control/rader/code/bootloder/lib/AUDIO/i2s_mic.c:234:9:I2S_Mic_GetResult	3

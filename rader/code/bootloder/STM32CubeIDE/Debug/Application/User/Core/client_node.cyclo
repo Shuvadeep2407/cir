@@ -1,0 +1,6 @@
+E:/drone/c_uas/drone control/rader/code/bootloder/Core/Src/client_node.c:44:9:Client_ParseFlashConfig	8
+E:/drone/c_uas/drone control/rader/code/bootloder/Core/Src/client_node.c:106:9:Client_Provision	11
+E:/drone/c_uas/drone control/rader/code/bootloder/Core/Src/client_node.c:201:6:Client_ProcessPacket	16
+E:/drone/c_uas/drone control/rader/code/bootloder/Core/Src/client_node.c:358:6:Client_SendResponse	4
+E:/drone/c_uas/drone control/rader/code/bootloder/Core/Src/client_node.c:395:6:Client_EnterRxMode	1
+E:/drone/c_uas/drone control/rader/code/bootloder/Core/Src/client_node.c:405:6:Client_Gdo0Handler	1
