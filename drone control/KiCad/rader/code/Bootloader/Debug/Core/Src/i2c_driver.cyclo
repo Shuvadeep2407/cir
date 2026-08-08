@@ -1,0 +1,7 @@
+../Core/Src/i2c_driver.c:19:6:I2C_Init	2
+../Core/Src/i2c_driver.c:47:5:I2C_Write	7
+../Core/Src/i2c_driver.c:73:5:I2C_Read	10
+../Core/Src/i2c_driver.c:107:5:I2C_WriteReg	9
+../Core/Src/i2c_driver.c:138:5:I2C_ReadReg	11
+../Core/Src/i2c_driver.c:177:5:I2C_IsDeviceReady	5
+../Core/Src/i2c_driver.c:196:6:I2C_ScanBus	4

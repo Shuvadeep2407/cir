@@ -1,0 +1,8 @@
+../Core/Src/stepper_driver.c:20:6:Stepper_Init	8	static
+../Core/Src/stepper_driver.c:54:6:Stepper_Move	16	static
+../Core/Src/stepper_driver.c:81:6:Stepper_SetSpeed	16	static
+../Core/Src/stepper_driver.c:90:6:Stepper_Stop	8	static
+../Core/Src/stepper_driver.c:99:6:Stepper_Enable	16	static
+../Core/Src/stepper_driver.c:111:9:Stepper_GetPosition	8	static
+../Core/Src/stepper_driver.c:120:6:Stepper_SetPosition	16	static
+../Core/Src/stepper_driver.c:129:6:Stepper_SetMicrostep	16	static

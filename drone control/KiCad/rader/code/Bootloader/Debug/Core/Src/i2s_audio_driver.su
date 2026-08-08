@@ -1,0 +1,8 @@
+../Core/Src/i2s_audio_driver.c:12:6:I2S_Audio_Init	16	static
+../Core/Src/i2s_audio_driver.c:39:6:I2S_Audio_StartDMA	16	static
+../Core/Src/i2s_audio_driver.c:45:6:I2S_Audio_StopDMA	8	static
+../Core/Src/i2s_audio_driver.c:47:6:I2S_Audio_SetVolume	16	static
+../Core/Src/i2s_audio_driver.c:49:5:I2S_Audio_IsPlaying	8	static
+../Core/Src/i2s_audio_driver.c:51:6:I2S_Audio_Write	16	static
+../Core/Src/i2s_audio_driver.c:57:6:I2S_Audio_Mute	16	static
+../Core/Src/i2s_audio_driver.c:59:6:I2S_Audio_DeInit	8	static

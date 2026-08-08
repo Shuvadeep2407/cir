@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"E:/drone/c_uas/drone control/rader/code/application/build/Debug/cmake_install.cmake",
+		"E:/drone/c_uas/drone control/rader/code/application/build/Debug/cmake/stm32cubemx/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

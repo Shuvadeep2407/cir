@@ -1,0 +1,9 @@
+../Drivers/CMSIS/Include/core_cm0plus.h:741:22:__NVIC_EnableIRQ	16	static,ignoring_inline_asm
+../Drivers/CMSIS/Include/core_cm0plus.h:850:22:__NVIC_SetPriority	24	static
+../Core/Src/can_driver.c:22:6:CAN_Init	32	static
+../Core/Src/can_driver.c:117:5:CAN_Transmit	48	static
+../Core/Src/can_driver.c:159:5:CAN_Receive	56	static
+../Core/Src/can_driver.c:209:6:CAN_SetFilter	16	static
+../Core/Src/can_driver.c:221:5:CAN_CheckBusOff	8	static
+../Core/Src/can_driver.c:229:6:CAN_ResetBus	8	static
+../Core/Src/can_driver.c:248:10:CAN_GetErrorCount	8	static

@@ -1,0 +1,12 @@
+../Core/Src/spi_radio_driver.c:16:16:SPI2_Transfer	16	static
+../Core/Src/spi_radio_driver.c:27:13:radio_cmd	16	static
+../Core/Src/spi_radio_driver.c:35:6:SPI_Radio_Init	8	static
+../Core/Src/spi_radio_driver.c:79:5:SPI_Radio_WriteReg	16	static
+../Core/Src/spi_radio_driver.c:86:5:SPI_Radio_ReadReg	16	static
+../Core/Src/spi_radio_driver.c:93:5:SPI_Radio_SendPacket	32	static
+../Core/Src/spi_radio_driver.c:105:5:SPI_Radio_ReceivePacket	48	static
+../Core/Src/spi_radio_driver.c:126:6:SPI_Radio_SetFrequency	24	static
+../Core/Src/spi_radio_driver.c:134:5:SPI_Radio_CheckChannel	16	static
+../Core/Src/spi_radio_driver.c:141:6:SPI_Radio_SetPower	24	static
+../Core/Src/spi_radio_driver.c:151:6:SPI_Radio_Sleep	8	static
+../Core/Src/spi_radio_driver.c:157:6:SPI_Radio_Wake	8	static

@@ -1,0 +1,108 @@
+# ==============================
+#   Acoustic Sensor Circuit Log
+#   INMP441 Array + STM32F412RCT6
+# ==============================
+
+## 1. Project Info
+- **Project:** C-UAS Training Aid Demo — Acoustic Detection Subsystem
+- **Circuit:** Custom STM32F412RCT6-based acoustic sensor node with 8x INMP441 digital MEMS microphones + 200 mm parabolic reflector
+- **Quantity:** 3 identical PCBs (one per cluster: F1 @ 60°, F2 @ 180°, F3 @ 300°)
+- **Location:** Fixed acoustic layer at 1.20 m height, 200 mm radius from center hub
+- **Last Updated:** 2026-06-28
+- **Status:** Power supply section placed on schematic — EUP3484A buck converter (24V→3.3V). STM32F412RCT6 and INMP441 microphones not yet added.
+
+---
+
+## 2. Working Features / Current Status
+- KiCad v9.0 project initialized: sound.kicad_pro, sound.kicad_sch, sound.kicad_pcb
+- **MCU:** STM32F412RCT6 (Cortex-M4F, 256KB SRAM, LQFP64) — not yet placed on schematic
+- **I2S Pinout Defined (CONFLICT RESOLVED):**
+  | I2S Bus | WS (LRCK) | CK (BCLK) | SD (Data) | INMP441 Pair       |
+  | ------- | --------- | --------- | --------- | ------------------ |
+  | I2S2    | PB9       | PB10      | PB15      | Mic1 (L), Mic2 (R) |
+  | I2S3    | PA4       | PC10      | PC12      | Mic3 (L), Mic4 (R) |
+  | I2S4    | PB12      | PB13      | PA1       | Mic5 (L), Mic6 (R) |
+  | I2S5    | PB1       | PB0       | PA10      | Mic7 (L), Mic8 (R) |
+  ✅ *No pin conflicts — all I2S buses use unique GPIO pins*
+- **Power Supply Section — Placed (EUP3484A Buck Converter):**
+  | Ref | Value | Footprint | Function |
+  |-----|-------|-----------|----------|
+  | U2 | EUP3484A | SOP-8_3.9x4.9mm_P1.27mm | Buck converter (24V→3.3V) |
+  | L2 | 100µH | CP_Radial_Tantal_D4.5mm_P2.50mm | Output inductor |
+  | D3 | ss24 | D_SMB | Schottky freewheeling diode |
+  | ZD1 | 3v3 | D_SMB | Output overvoltage clamp |
+  | C2 | 100µF | CP_Radial_D6.3mm_P2.50mm | Input bulk capacitor |
+  | C3 | 100µF | CP_Radial_D6.3mm_P2.50mm | Output bulk capacitor |
+  | C7, C8, C9, C14 | 100nF (0.1µF) | C_0603_1608Metric | Decoupling capacitors |
+  | C12 | 10p | C_0603_1608Metric | Crystal load cap (planned) |
+  | C13 | 33p | C_0603_1608Metric | Crystal load cap (planned) |
+  | R7 | 1K | R_0603_1608Metric | LED current limit |
+  | R8 | 26K | R_0603_1608Metric | Feedback network |
+  | R9 | 10K | R_0603_1608Metric | Feedback/COMP network |
+  | R13 | 10K | R_0603_1608Metric | Feedback divider (top) |
+  | R15 | 4k7 | R_0603_1608Metric | Feedback divider (bottom) |
+  | LD1 | LED | LED_0603_1608Metric | Power indicator |
+- **Symbol libraries pinned:** None yet
+- **Footprint libraries pinned:** None yet
+- **Log file tracking all design work**
+
+---
+
+## 3. Link / Connection Status
+- 8x INMP441 - I2S bus (WS, SCK, SD) - STM32F412RCT6
+- STM32F412RCT6 - UART or SPI - LoRa module - AI workstation / console
+- Power: 3.3 VDC (from main-circuit power supply via 24 VDC bus + local regulator)
+- Processing: STM32F412RCT6 runs FFT / beamforming (DoA) - packages data - LoRa uplink
+
+---
+
+## 4. Decision Log
+| Date | Decision | Rationale | Status |
+|------|----------|-----------|--------|
+| | | | |
+| 2026-06-28 | Switched from STM32F411 to STM32F412RCT6 | STM32F412RCT6 offers better peripheral set for 8-ch I2S mic array; LQFP64 package suitable for compact PCB | Approved |
+| 2026-06-28 | Defined I2S pinout for 8x INMP441 across I2S2/3/4/5 buses | Enables 8-channel microphone capture with stereo-pair sharing per bus | Draft — I2S4 PB12/PB13 conflict with I2S2 needs resolution |
+| 2026-06-28 | Selected EUP3484A buck converter for 24V→3.3V on-board regulation | Eliminates need for external 3.3V supply rail; 3A output sufficient for STM32F412 + 8x INMP441 + LoRa | Placed on schematic — STM32F412 and INMP441 not yet connected |
+| 2026-06-28 | Resolved I2S2/I2S4 PB12/PB13 conflict: remapped I2S2→PB9/PB10, I2S3→PA4 | Eliminates all pin sharing between I2S buses; verified via STM32CubeMX pin configuration | Approved — all I2S pins now unique |
+
+---
+
+## 5. Pending Tasks / Next Steps
+- [x] Add power supply section (EUP3484A buck converter: 24V→3.3V) — **DONE on schematic**
+- [ ] Review STM32F412RCT6 minimum circuit requirements (power, decoupling capacitors, crystal oscillator)
+- [ ] Select and add STM32F412RCT6 symbol and footprint to project
+- [x] Resolve I2S2/I2S4 PB12/PB13 pin conflict (remapped I2S2→PB9/PB10, I2S3→PA4) — **CONFLICT RESOLVED**
+- [ ] Add 8x INMP441 microphone symbols and connect I2S bus (L/R channel selection)
+- [ ] Add 200 mm parabolic reflector mechanical outline to PCB edge cuts
+- [ ] Add LoRa module (e.g., SX1278) and antenna footprint
+- [ ] Add programming/debug header (SWD) for STM32F412RCT6
+- [ ] **Fix power rail label mismatch:** `+5V` symbol used for `+24V`, `+3V8` symbol used for `+3V3` — use correct power symbols or custom labels
+- [ ] Route PCB: I2S clock lines (attention to skew), power distribution, analog/digital separation
+- [ ] Assign unique ID / address for each of the 3 boards (F1, F2, F3)
+- [ ] Generate BOM and verify component availability within budget (75,000 BDT total for acoustic subsystem)
+- [ ] Design microphone housing / acoustic coupling to 200 mm parabolic reflector
+- [ ] Fabricate and assemble 3x prototype boards
+- [ ] Firmware: I2S capture - FFT - Direction of Arrival estimation - LoRa TX
+
+---
+
+## 6. Version History
+| Version | Date | Changes |
+|---------|------|---------|
+| v0.1    | 2026-06-28 | Initial log setup with project info, current status, and pending tasks |
+| v0.2    | 2026-06-28 | Switched MCU from STM32F411 to STM32F412RCT6; added Decision Log entry |
+| v0.3    | 2026-06-28 | Defined I2S pinout for 8x INMP441 across I2S2/3/4/5 buses; flagged PB12/PB13 conflict between I2S2 and I2S4; updated Blockers section
+| v0.4    | 2026-06-28 | Placed EUP3484A buck converter power supply section on schematic (24V→3.3V); added 18 components with footprints; flagged missing STM32F412RCT6 MCU, missing INMP441 mics, and power rail label mismatch
+| v0.5    | 2026-06-28 | Resolved I2S2/I2S4 PB12/PB13 pin conflict: remapped I2S2 WS→PB9, CK→PB10; I2S3 WS→PA4; all 4 I2S buses now on unique GPIO pins; verified via STM32CubeMX pin configuration
+
+---
+
+## 7. Blocker / Unfinished Work Notes
+- **Power Rail Label Mismatch:** `+5V` power symbol used for `+24V` net; `+3V8` power symbol used for `+3V3` net. These are cosmetic but could cause confusion during PCB review. Should use custom/renamed power symbols or add net-label overrides.
+- **STM32F412RCT6 MCU NOT on Schematic:** The buck converter power supply is placed, but the actual MCU (STM32F412RCT6) and all 8 INMP441 microphones are not yet added. The crystal load capacitors (C12=10p, C13=33p) are placed but unconnected. This is the highest priority gap.
+- ~~I2S2/I2S4 Pin Conflict~~ **✅ RESOLVED** — Remapped I2S2 WS→PB9, CK→PB10; I2S3 WS→PA4. All I2S buses now use unique GPIO pins.
+
+---
+
+This file is the single source of truth for all acoustic sensor circuit work.
+Follow the Work Completion Path: Add task -> Make change -> Verify -> Update status -> Log version.

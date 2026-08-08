@@ -1,0 +1,291 @@
+[2026-06-24 12:30:58] INFO     | MEDFLIGHT:info:80 | Database schema created/verified
+[2026-06-24 12:30:58] INFO     | MEDFLIGHT:info:80 | Default users seeded
+[2026-06-24 12:30:58] INFO     | MEDFLIGHT:info:80 | Database initialized at data\medflight.db
+[2026-06-24 12:30:58] INFO     | MEDFLIGHT:info:80 | Created sensor: AN/MPQ-64 Radar (RADAR_01)
+[2026-06-24 12:30:58] INFO     | MEDFLIGHT:info:80 | Created sensor: RF-3000 Scanner (RF_01)
+[2026-06-24 12:30:58] INFO     | MEDFLIGHT:info:80 | Created sensor: Audi Array M2K (ACOUSTIC_01)
+[2026-06-24 12:30:58] INFO     | MEDFLIGHT:info:80 | Created sensor: LRF-2200 Rangefinder (LRF_01)
+[2026-06-24 12:30:58] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-1 (CAM_EO_01)
+[2026-06-24 12:30:58] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-2 (CAM_IR_01)
+[2026-06-24 12:30:58] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-3 (CAM_EO_02)
+[2026-06-24 12:30:58] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-4 (CAM_IR_02)
+[2026-06-24 12:30:58] INFO     | MEDFLIGHT:info:80 | Created sensor: YOLO AI Vision (YOLO_01)
+[2026-06-24 12:30:58] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0000 (DJI_MAVIC_3)
+[2026-06-24 12:30:58] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0001 (DJI_PHANTOM_4)
+[2026-06-24 12:30:58] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0002 (AUTEL_ROBOTICS)
+[2026-06-24 12:32:01] INFO     | MEDFLIGHT:info:80 | Database schema created/verified
+[2026-06-24 12:32:01] INFO     | MEDFLIGHT:info:80 | Database initialized at data\medflight.db
+[2026-06-24 12:32:01] INFO     | MEDFLIGHT:info:80 | Created sensor: AN/MPQ-64 Radar (RADAR_01)
+[2026-06-24 12:32:01] INFO     | MEDFLIGHT:info:80 | Created sensor: RF-3000 Scanner (RF_01)
+[2026-06-24 12:32:01] INFO     | MEDFLIGHT:info:80 | Created sensor: Audi Array M2K (ACOUSTIC_01)
+[2026-06-24 12:32:01] INFO     | MEDFLIGHT:info:80 | Created sensor: LRF-2200 Rangefinder (LRF_01)
+[2026-06-24 12:32:01] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-1 (CAM_EO_01)
+[2026-06-24 12:32:01] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-2 (CAM_IR_01)
+[2026-06-24 12:32:01] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-3 (CAM_EO_02)
+[2026-06-24 12:32:01] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-4 (CAM_IR_02)
+[2026-06-24 12:32:01] INFO     | MEDFLIGHT:info:80 | Created sensor: YOLO AI Vision (YOLO_01)
+[2026-06-24 12:32:01] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0000 (DJI_MAVIC_3)
+[2026-06-24 12:32:01] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0001 (DJI_PHANTOM_4)
+[2026-06-24 12:32:01] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0002 (AUTEL_ROBOTICS)
+[2026-06-24 12:32:29] INFO     | MEDFLIGHT:info:80 | Database schema created/verified
+[2026-06-24 12:32:29] INFO     | MEDFLIGHT:info:80 | Database initialized at data\medflight.db
+[2026-06-24 12:32:29] INFO     | MEDFLIGHT:info:80 | Created sensor: AN/MPQ-64 Radar (RADAR_01)
+[2026-06-24 12:32:29] INFO     | MEDFLIGHT:info:80 | Created sensor: RF-3000 Scanner (RF_01)
+[2026-06-24 12:32:29] INFO     | MEDFLIGHT:info:80 | Created sensor: Audi Array M2K (ACOUSTIC_01)
+[2026-06-24 12:32:29] INFO     | MEDFLIGHT:info:80 | Created sensor: LRF-2200 Rangefinder (LRF_01)
+[2026-06-24 12:32:29] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-1 (CAM_EO_01)
+[2026-06-24 12:32:29] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-2 (CAM_IR_01)
+[2026-06-24 12:32:29] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-3 (CAM_EO_02)
+[2026-06-24 12:32:29] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-4 (CAM_IR_02)
+[2026-06-24 12:32:29] INFO     | MEDFLIGHT:info:80 | Created sensor: YOLO AI Vision (YOLO_01)
+[2026-06-24 12:32:29] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0000 (DJI_MAVIC_3)
+[2026-06-24 12:32:29] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0001 (DJI_PHANTOM_4)
+[2026-06-24 12:32:29] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0002 (AUTEL_ROBOTICS)
+[2026-06-24 12:32:57] INFO     | MEDFLIGHT:info:80 | Database schema created/verified
+[2026-06-24 12:32:57] INFO     | MEDFLIGHT:info:80 | Database initialized at data\medflight.db
+[2026-06-24 12:32:57] INFO     | MEDFLIGHT:info:80 | Created sensor: AN/MPQ-64 Radar (RADAR_01)
+[2026-06-24 12:32:57] INFO     | MEDFLIGHT:info:80 | Created sensor: RF-3000 Scanner (RF_01)
+[2026-06-24 12:32:57] INFO     | MEDFLIGHT:info:80 | Created sensor: Audi Array M2K (ACOUSTIC_01)
+[2026-06-24 12:32:57] INFO     | MEDFLIGHT:info:80 | Created sensor: LRF-2200 Rangefinder (LRF_01)
+[2026-06-24 12:32:57] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-1 (CAM_EO_01)
+[2026-06-24 12:32:57] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-2 (CAM_IR_01)
+[2026-06-24 12:32:57] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-3 (CAM_EO_02)
+[2026-06-24 12:32:57] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-4 (CAM_IR_02)
+[2026-06-24 12:32:57] INFO     | MEDFLIGHT:info:80 | Created sensor: YOLO AI Vision (YOLO_01)
+[2026-06-24 12:32:57] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0000 (DJI_MAVIC_3)
+[2026-06-24 12:32:57] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0001 (DJI_PHANTOM_4)
+[2026-06-24 12:32:57] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0002 (AUTEL_ROBOTICS)
+[2026-06-24 12:32:57] INFO     | MEDFLIGHT:info:80 | MED-FLIGHT C-UAS Detection System v2.4.0 initialized
+[2026-06-24 12:32:57] INFO     | MEDFLIGHT:info:80 | MED-FLIGHT C-UAS Detection System v2.4.0 started
+[2026-06-24 12:33:12] INFO     | MEDFLIGHT:info:80 | Database schema created/verified
+[2026-06-24 12:33:12] INFO     | MEDFLIGHT:info:80 | Database initialized at data\medflight.db
+[2026-06-24 12:33:12] INFO     | MEDFLIGHT:info:80 | Created sensor: AN/MPQ-64 Radar (RADAR_01)
+[2026-06-24 12:33:12] INFO     | MEDFLIGHT:info:80 | Created sensor: RF-3000 Scanner (RF_01)
+[2026-06-24 12:33:12] INFO     | MEDFLIGHT:info:80 | Created sensor: Audi Array M2K (ACOUSTIC_01)
+[2026-06-24 12:33:12] INFO     | MEDFLIGHT:info:80 | Created sensor: LRF-2200 Rangefinder (LRF_01)
+[2026-06-24 12:33:12] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-1 (CAM_EO_01)
+[2026-06-24 12:33:12] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-2 (CAM_IR_01)
+[2026-06-24 12:33:12] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-3 (CAM_EO_02)
+[2026-06-24 12:33:12] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-4 (CAM_IR_02)
+[2026-06-24 12:33:12] INFO     | MEDFLIGHT:info:80 | Created sensor: YOLO AI Vision (YOLO_01)
+[2026-06-24 12:33:12] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0000 (DJI_MAVIC_3)
+[2026-06-24 12:33:12] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0001 (DJI_PHANTOM_4)
+[2026-06-24 12:33:12] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0002 (AUTEL_ROBOTICS)
+[2026-06-24 12:33:12] INFO     | MEDFLIGHT:info:80 | MED-FLIGHT C-UAS Detection System v2.4.0 initialized
+[2026-06-24 12:33:12] INFO     | MEDFLIGHT:info:80 | MED-FLIGHT C-UAS Detection System v2.4.0 started
+[2026-06-24 12:33:18] WARNING  | MEDFLIGHT:warning:83 | ALERT [INFO] SYSTEM: Target Detected
+[2026-06-24 12:33:18] INFO     | MEDFLIGHT:info:80 | New target: UAS-0003 (AUTEL_ROBOTICS)
+[2026-06-24 12:33:18] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0003 (AUTEL_ROBOTICS)
+[2026-06-24 12:33:19] WARNING  | MEDFLIGHT:warning:83 | ALERT [INFO] SYSTEM: Target Detected
+[2026-06-24 12:33:19] INFO     | MEDFLIGHT:info:80 | New target: UAS-0003 (AUTEL_ROBOTICS)
+[2026-06-24 12:33:19] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0003 (AUTEL_ROBOTICS)
+[2026-06-24 12:34:11] WARNING  | MEDFLIGHT:warning:83 | ALERT [INFO] SYSTEM: Target Detected
+[2026-06-24 12:34:11] INFO     | MEDFLIGHT:info:80 | New target: UAS-0004 (SKYDIO)
+[2026-06-24 12:34:11] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0004 (SKYDIO)
+[2026-06-24 12:34:26] WARNING  | MEDFLIGHT:warning:83 | ALERT [INFO] SYSTEM: Target Detected
+[2026-06-24 12:34:26] INFO     | MEDFLIGHT:info:80 | New target: UAS-0004 (SKYDIO)
+[2026-06-24 12:34:26] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0004 (SKYDIO)
+[2026-06-24 12:36:37] INFO     | MEDFLIGHT:info:80 | Database schema created/verified
+[2026-06-24 12:36:37] INFO     | MEDFLIGHT:info:80 | Database initialized at data\medflight.db
+[2026-06-24 12:36:37] INFO     | MEDFLIGHT:info:80 | Created sensor: AN/MPQ-64 Radar (RADAR_01)
+[2026-06-24 12:36:37] INFO     | MEDFLIGHT:info:80 | Created sensor: RF-3000 Scanner (RF_01)
+[2026-06-24 12:36:37] INFO     | MEDFLIGHT:info:80 | Created sensor: Audi Array M2K (ACOUSTIC_01)
+[2026-06-24 12:36:37] INFO     | MEDFLIGHT:info:80 | Created sensor: LRF-2200 Rangefinder (LRF_01)
+[2026-06-24 12:36:37] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-1 (CAM_EO_01)
+[2026-06-24 12:36:37] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-2 (CAM_IR_01)
+[2026-06-24 12:36:37] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-3 (CAM_EO_02)
+[2026-06-24 12:36:37] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-4 (CAM_IR_02)
+[2026-06-24 12:36:37] INFO     | MEDFLIGHT:info:80 | Created sensor: YOLO AI Vision (YOLO_01)
+[2026-06-24 12:36:37] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0000 (DJI_MAVIC_3)
+[2026-06-24 12:36:37] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0001 (DJI_PHANTOM_4)
+[2026-06-24 12:36:37] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0002 (AUTEL_ROBOTICS)
+[2026-06-24 12:36:37] INFO     | MEDFLIGHT:info:80 | MED-FLIGHT C-UAS Detection System v2.4.0 initialized
+[2026-06-24 12:36:37] INFO     | MEDFLIGHT:info:80 | MED-FLIGHT C-UAS Detection System v2.4.0 started
+[2026-06-24 12:36:47] WARNING  | MEDFLIGHT:warning:83 | ALERT [INFO] SYSTEM: Target Detected
+[2026-06-24 12:36:47] INFO     | MEDFLIGHT:info:80 | New target: UAS-0003 (UNKNOWN_UAS)
+[2026-06-24 12:36:47] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0003 (UNKNOWN_UAS)
+[2026-06-24 12:37:31] INFO     | MEDFLIGHT:info:80 | Database schema created/verified
+[2026-06-24 12:37:31] INFO     | MEDFLIGHT:info:80 | Database initialized at data\medflight.db
+[2026-06-24 12:37:31] INFO     | MEDFLIGHT:info:80 | Created sensor: AN/MPQ-64 Radar (RADAR_01)
+[2026-06-24 12:37:31] INFO     | MEDFLIGHT:info:80 | Created sensor: RF-3000 Scanner (RF_01)
+[2026-06-24 12:37:31] INFO     | MEDFLIGHT:info:80 | Created sensor: Audi Array M2K (ACOUSTIC_01)
+[2026-06-24 12:37:31] INFO     | MEDFLIGHT:info:80 | Created sensor: LRF-2200 Rangefinder (LRF_01)
+[2026-06-24 12:37:31] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-1 (CAM_EO_01)
+[2026-06-24 12:37:31] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-2 (CAM_IR_01)
+[2026-06-24 12:37:31] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-3 (CAM_EO_02)
+[2026-06-24 12:37:31] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-4 (CAM_IR_02)
+[2026-06-24 12:37:31] INFO     | MEDFLIGHT:info:80 | Created sensor: YOLO AI Vision (YOLO_01)
+[2026-06-24 12:37:31] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0000 (DJI_MAVIC_3)
+[2026-06-24 12:37:31] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0001 (DJI_PHANTOM_4)
+[2026-06-24 12:37:31] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0002 (AUTEL_ROBOTICS)
+[2026-06-24 12:37:31] INFO     | MEDFLIGHT:info:80 | MED-FLIGHT C-UAS Detection System v2.4.0 initialized
+[2026-06-24 12:37:31] INFO     | MEDFLIGHT:info:80 | MED-FLIGHT C-UAS Detection System v2.4.0 started
+[2026-06-24 12:38:16] INFO     | MEDFLIGHT:info:80 | Database schema created/verified
+[2026-06-24 12:38:16] INFO     | MEDFLIGHT:info:80 | Database initialized at data\medflight.db
+[2026-06-24 12:38:16] INFO     | MEDFLIGHT:info:80 | Created sensor: AN/MPQ-64 Radar (RADAR_01)
+[2026-06-24 12:38:16] INFO     | MEDFLIGHT:info:80 | Created sensor: RF-3000 Scanner (RF_01)
+[2026-06-24 12:38:16] INFO     | MEDFLIGHT:info:80 | Created sensor: Audi Array M2K (ACOUSTIC_01)
+[2026-06-24 12:38:16] INFO     | MEDFLIGHT:info:80 | Created sensor: LRF-2200 Rangefinder (LRF_01)
+[2026-06-24 12:38:16] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-1 (CAM_EO_01)
+[2026-06-24 12:38:16] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-2 (CAM_IR_01)
+[2026-06-24 12:38:16] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-3 (CAM_EO_02)
+[2026-06-24 12:38:16] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-4 (CAM_IR_02)
+[2026-06-24 12:38:16] INFO     | MEDFLIGHT:info:80 | Created sensor: YOLO AI Vision (YOLO_01)
+[2026-06-24 12:38:16] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0000 (DJI_MAVIC_3)
+[2026-06-24 12:38:16] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0001 (DJI_PHANTOM_4)
+[2026-06-24 12:38:16] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0002 (AUTEL_ROBOTICS)
+[2026-06-24 12:38:16] INFO     | MEDFLIGHT:info:80 | MED-FLIGHT C-UAS Detection System v2.4.0 initialized
+[2026-06-24 12:38:16] INFO     | MEDFLIGHT:info:80 | MED-FLIGHT C-UAS Detection System v2.4.0 started
+[2026-06-24 12:38:25] WARNING  | MEDFLIGHT:warning:83 | ALERT [INFO] SYSTEM: Target Detected
+[2026-06-24 12:38:25] INFO     | MEDFLIGHT:info:80 | New target: UAS-0003 (AUTEL_ROBOTICS)
+[2026-06-24 12:38:25] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0003 (AUTEL_ROBOTICS)
+[2026-06-24 12:38:28] WARNING  | MEDFLIGHT:warning:83 | ALERT [INFO] SYSTEM: Target Detected
+[2026-06-24 12:38:28] INFO     | MEDFLIGHT:info:80 | New target: UAS-0004 (DJI_MAVIC_3)
+[2026-06-24 12:38:28] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0004 (DJI_MAVIC_3)
+[2026-06-24 12:39:10] INFO     | MEDFLIGHT:info:80 | Database schema created/verified
+[2026-06-24 12:39:10] INFO     | MEDFLIGHT:info:80 | Database initialized at data\medflight.db
+[2026-06-24 12:39:10] INFO     | MEDFLIGHT:info:80 | Created sensor: AN/MPQ-64 Radar (RADAR_01)
+[2026-06-24 12:39:10] INFO     | MEDFLIGHT:info:80 | Created sensor: RF-3000 Scanner (RF_01)
+[2026-06-24 12:39:10] INFO     | MEDFLIGHT:info:80 | Created sensor: Audi Array M2K (ACOUSTIC_01)
+[2026-06-24 12:39:10] INFO     | MEDFLIGHT:info:80 | Created sensor: LRF-2200 Rangefinder (LRF_01)
+[2026-06-24 12:39:10] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-1 (CAM_EO_01)
+[2026-06-24 12:39:10] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-2 (CAM_IR_01)
+[2026-06-24 12:39:10] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-3 (CAM_EO_02)
+[2026-06-24 12:39:10] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-4 (CAM_IR_02)
+[2026-06-24 12:39:10] INFO     | MEDFLIGHT:info:80 | Created sensor: YOLO AI Vision (YOLO_01)
+[2026-06-24 12:39:10] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0000 (DJI_MAVIC_3)
+[2026-06-24 12:39:10] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0001 (DJI_PHANTOM_4)
+[2026-06-24 12:39:10] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0002 (AUTEL_ROBOTICS)
+[2026-06-24 12:39:10] INFO     | MEDFLIGHT:info:80 | MED-FLIGHT C-UAS Detection System v2.4.0 initialized
+[2026-06-24 12:39:10] INFO     | MEDFLIGHT:info:80 | MED-FLIGHT C-UAS Detection System v2.4.0 started
+[2026-06-24 12:39:12] WARNING  | MEDFLIGHT:warning:83 | ALERT [INFO] SYSTEM: Target Detected
+[2026-06-24 12:39:12] INFO     | MEDFLIGHT:info:80 | New target: UAS-0003 (UNKNOWN_UAS)
+[2026-06-24 12:39:12] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0003 (UNKNOWN_UAS)
+[2026-06-24 12:39:25] WARNING  | MEDFLIGHT:warning:83 | ALERT [INFO] SYSTEM: Target Detected
+[2026-06-24 12:39:25] INFO     | MEDFLIGHT:info:80 | New target: UAS-0003 (AUTEL_ROBOTICS)
+[2026-06-24 12:39:25] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0003 (AUTEL_ROBOTICS)
+[2026-06-24 12:40:12] INFO     | MEDFLIGHT:info:80 | Database schema created/verified
+[2026-06-24 12:40:12] INFO     | MEDFLIGHT:info:80 | Database initialized at data\medflight.db
+[2026-06-24 12:40:12] INFO     | MEDFLIGHT:info:80 | Created sensor: AN/MPQ-64 Radar (RADAR_01)
+[2026-06-24 12:40:12] INFO     | MEDFLIGHT:info:80 | Created sensor: RF-3000 Scanner (RF_01)
+[2026-06-24 12:40:12] INFO     | MEDFLIGHT:info:80 | Created sensor: Audi Array M2K (ACOUSTIC_01)
+[2026-06-24 12:40:12] INFO     | MEDFLIGHT:info:80 | Created sensor: LRF-2200 Rangefinder (LRF_01)
+[2026-06-24 12:40:12] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-1 (CAM_EO_01)
+[2026-06-24 12:40:12] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-2 (CAM_IR_01)
+[2026-06-24 12:40:12] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-3 (CAM_EO_02)
+[2026-06-24 12:40:12] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-4 (CAM_IR_02)
+[2026-06-24 12:40:12] INFO     | MEDFLIGHT:info:80 | Created sensor: YOLO AI Vision (YOLO_01)
+[2026-06-24 12:40:12] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0000 (DJI_MAVIC_3)
+[2026-06-24 12:40:12] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0001 (DJI_PHANTOM_4)
+[2026-06-24 12:40:12] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0002 (AUTEL_ROBOTICS)
+[2026-06-24 12:40:12] INFO     | MEDFLIGHT:info:80 | MED-FLIGHT C-UAS Detection System v2.4.0 initialized
+[2026-06-24 12:40:12] INFO     | MEDFLIGHT:info:80 | MED-FLIGHT C-UAS Detection System v2.4.0 started
+[2026-06-24 12:40:41] WARNING  | MEDFLIGHT:warning:83 | ALERT [INFO] SYSTEM: Target Detected
+[2026-06-24 12:40:41] INFO     | MEDFLIGHT:info:80 | New target: UAS-0003 (DJI_PHANTOM_4)
+[2026-06-24 12:40:41] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0003 (DJI_PHANTOM_4)
+[2026-06-24 12:41:11] WARNING  | MEDFLIGHT:warning:83 | ALERT [INFO] SYSTEM: Target Detected
+[2026-06-24 12:41:11] INFO     | MEDFLIGHT:info:80 | New target: UAS-0004 (SKYDIO)
+[2026-06-24 12:41:11] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0004 (SKYDIO)
+[2026-06-24 12:43:37] WARNING  | MEDFLIGHT:warning:83 | ALERT [INFO] SYSTEM: Target Detected
+[2026-06-24 12:43:37] INFO     | MEDFLIGHT:info:80 | New target: UAS-0005 (DJI_MAVIC_3)
+[2026-06-24 12:43:37] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0005 (DJI_MAVIC_3)
+[2026-06-24 12:44:27] WARNING  | MEDFLIGHT:warning:83 | ALERT [INFO] SYSTEM: Target Detected
+[2026-06-24 12:44:27] INFO     | MEDFLIGHT:info:80 | New target: UAS-0004 (AUTEL_ROBOTICS)
+[2026-06-24 12:44:27] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0004 (AUTEL_ROBOTICS)
+[2026-06-24 12:46:58] INFO     | MEDFLIGHT:info:80 | Database schema created/verified
+[2026-06-24 12:46:58] INFO     | MEDFLIGHT:info:80 | Database initialized at data\medflight.db
+[2026-06-24 12:46:58] INFO     | MEDFLIGHT:info:80 | Created sensor: AN/MPQ-64 Radar (RADAR_01)
+[2026-06-24 12:46:58] INFO     | MEDFLIGHT:info:80 | Created sensor: RF-3000 Scanner (RF_01)
+[2026-06-24 12:46:58] INFO     | MEDFLIGHT:info:80 | Created sensor: Audi Array M2K (ACOUSTIC_01)
+[2026-06-24 12:46:58] INFO     | MEDFLIGHT:info:80 | Created sensor: LRF-2200 Rangefinder (LRF_01)
+[2026-06-24 12:46:58] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-1 (CAM_EO_01)
+[2026-06-24 12:46:58] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-2 (CAM_IR_01)
+[2026-06-24 12:46:58] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-3 (CAM_EO_02)
+[2026-06-24 12:46:58] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-4 (CAM_IR_02)
+[2026-06-24 12:46:58] INFO     | MEDFLIGHT:info:80 | Created sensor: YOLO AI Vision (YOLO_01)
+[2026-06-24 12:46:58] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0000 (DJI_MAVIC_3)
+[2026-06-24 12:46:58] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0001 (DJI_PHANTOM_4)
+[2026-06-24 12:46:58] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0002 (AUTEL_ROBOTICS)
+[2026-06-24 12:46:59] INFO     | MEDFLIGHT:info:80 | MED-FLIGHT C-UAS Detection System v2.4.0 initialized
+[2026-06-24 12:46:59] INFO     | MEDFLIGHT:info:80 | MED-FLIGHT C-UAS Detection System v2.4.0 started
+[2026-06-24 12:47:07] WARNING  | MEDFLIGHT:warning:83 | ALERT [INFO] SYSTEM: Target Detected
+[2026-06-24 12:47:07] INFO     | MEDFLIGHT:info:80 | New target: UAS-0003 (SKYDIO)
+[2026-06-24 12:47:07] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0003 (SKYDIO)
+[2026-06-24 12:47:16] INFO     | MEDFLIGHT:info:80 | Database schema created/verified
+[2026-06-24 12:47:16] INFO     | MEDFLIGHT:info:80 | Database initialized at data\medflight.db
+[2026-06-24 12:47:16] INFO     | MEDFLIGHT:info:80 | Created sensor: AN/MPQ-64 Radar (RADAR_01)
+[2026-06-24 12:47:16] INFO     | MEDFLIGHT:info:80 | Created sensor: RF-3000 Scanner (RF_01)
+[2026-06-24 12:47:16] INFO     | MEDFLIGHT:info:80 | Created sensor: Audi Array M2K (ACOUSTIC_01)
+[2026-06-24 12:47:16] INFO     | MEDFLIGHT:info:80 | Created sensor: LRF-2200 Rangefinder (LRF_01)
+[2026-06-24 12:47:16] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-1 (CAM_EO_01)
+[2026-06-24 12:47:16] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-2 (CAM_IR_01)
+[2026-06-24 12:47:16] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-3 (CAM_EO_02)
+[2026-06-24 12:47:16] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-4 (CAM_IR_02)
+[2026-06-24 12:47:16] INFO     | MEDFLIGHT:info:80 | Created sensor: YOLO AI Vision (YOLO_01)
+[2026-06-24 12:47:16] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0000 (DJI_MAVIC_3)
+[2026-06-24 12:47:16] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0001 (DJI_PHANTOM_4)
+[2026-06-24 12:47:16] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0002 (AUTEL_ROBOTICS)
+[2026-06-24 12:47:16] INFO     | MEDFLIGHT:info:80 | MED-FLIGHT C-UAS Detection System v2.4.0 initialized
+[2026-06-24 12:47:16] INFO     | MEDFLIGHT:info:80 | MED-FLIGHT C-UAS Detection System v2.4.0 started
+[2026-06-24 12:56:21] INFO     | MEDFLIGHT:info:80 | Database schema created/verified
+[2026-06-24 12:56:21] INFO     | MEDFLIGHT:info:80 | Database initialized at data\medflight.db
+[2026-06-24 12:56:51] INFO     | MEDFLIGHT:info:80 | Database schema created/verified
+[2026-06-24 12:56:51] INFO     | MEDFLIGHT:info:80 | Database initialized at data\medflight.db
+[2026-06-24 12:56:51] INFO     | MEDFLIGHT:info:80 | Created sensor: AN/MPQ-64 Radar (RADAR_01)
+[2026-06-24 12:56:51] INFO     | MEDFLIGHT:info:80 | Created sensor: RF-3000 Scanner (RF_01)
+[2026-06-24 12:56:51] INFO     | MEDFLIGHT:info:80 | Created sensor: Audi Array M2K (ACOUSTIC_01)
+[2026-06-24 12:56:51] INFO     | MEDFLIGHT:info:80 | Created sensor: LRF-2200 Rangefinder (LRF_01)
+[2026-06-24 12:56:51] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-1 (CAM_EO_01)
+[2026-06-24 12:56:51] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-2 (CAM_IR_01)
+[2026-06-24 12:56:51] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-3 (CAM_EO_02)
+[2026-06-24 12:56:51] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-4 (CAM_IR_02)
+[2026-06-24 12:56:51] INFO     | MEDFLIGHT:info:80 | Created sensor: YOLO AI Vision (YOLO_01)
+[2026-06-24 12:56:51] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0000 (DJI_MAVIC_3)
+[2026-06-24 12:56:51] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0001 (DJI_PHANTOM_4)
+[2026-06-24 12:56:51] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0002 (AUTEL_ROBOTICS)
+[2026-06-24 12:57:18] INFO     | MEDFLIGHT:info:80 | Database schema created/verified
+[2026-06-24 12:57:18] INFO     | MEDFLIGHT:info:80 | Database initialized at data\medflight.db
+[2026-06-24 12:57:18] INFO     | MEDFLIGHT:info:80 | Created sensor: AN/MPQ-64 Radar (RADAR_01)
+[2026-06-24 12:57:18] INFO     | MEDFLIGHT:info:80 | Created sensor: RF-3000 Scanner (RF_01)
+[2026-06-24 12:57:18] INFO     | MEDFLIGHT:info:80 | Created sensor: Audi Array M2K (ACOUSTIC_01)
+[2026-06-24 12:57:18] INFO     | MEDFLIGHT:info:80 | Created sensor: LRF-2200 Rangefinder (LRF_01)
+[2026-06-24 12:57:18] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-1 (CAM_EO_01)
+[2026-06-24 12:57:18] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-2 (CAM_IR_01)
+[2026-06-24 12:57:18] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-3 (CAM_EO_02)
+[2026-06-24 12:57:18] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-4 (CAM_IR_02)
+[2026-06-24 12:57:18] INFO     | MEDFLIGHT:info:80 | Created sensor: YOLO AI Vision (YOLO_01)
+[2026-06-24 12:57:18] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0000 (DJI_MAVIC_3)
+[2026-06-24 12:57:18] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0001 (DJI_PHANTOM_4)
+[2026-06-24 12:57:18] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0002 (AUTEL_ROBOTICS)
+[2026-06-24 12:57:18] INFO     | MEDFLIGHT:info:80 | MED-FLIGHT C-UAS Detection System v2.4.0 initialized
+[2026-06-24 12:57:18] INFO     | MEDFLIGHT:info:80 | MED-FLIGHT C-UAS Detection System v2.4.0 started
+[2026-06-24 12:57:21] INFO     | MEDFLIGHT:info:80 | Started 9 sensor workers
+[2026-06-24 12:57:21] INFO     | MEDFLIGHT:info:80 | Starting sensor worker: AN/MPQ-64 Radar
+[2026-06-24 12:57:21] INFO     | MEDFLIGHT:info:80 | Starting sensor worker: LRF-2200 Rangefinder
+[2026-06-24 12:57:21] INFO     | MEDFLIGHT:info:80 | Starting sensor worker: EO/IR Camera-3
+[2026-06-24 12:57:21] INFO     | MEDFLIGHT:info:80 | Starting sensor worker: Audi Array M2K
+[2026-06-24 12:57:21] INFO     | MEDFLIGHT:info:80 | Starting sensor worker: EO/IR Camera-2
+[2026-06-24 12:57:21] INFO     | MEDFLIGHT:info:80 | Starting sensor worker: RF-3000 Scanner
+[2026-06-24 12:57:21] INFO     | MEDFLIGHT:info:80 | Starting sensor worker: EO/IR Camera-4
+[2026-06-24 12:57:21] INFO     | MEDFLIGHT:info:80 | Starting sensor worker: EO/IR Camera-1
+[2026-06-24 12:57:21] INFO     | MEDFLIGHT:info:80 | Starting sensor worker: YOLO AI Vision
+[2026-06-24 12:57:21] WARNING  | MEDFLIGHT:warning:83 | ALERT [INFO] SYSTEM: System Initialized
+[2026-06-24 12:57:21] WARNING  | MEDFLIGHT:warning:83 | ALERT [WARNING] SYSTEM: Sensor calibration recommended
+[2026-06-24 12:57:21] INFO     | MEDFLIGHT:info:80 | System fully initialized
+[2026-06-24 12:57:36] INFO     | MEDFLIGHT:info:80 | All alerts cleared
+[2026-06-24 12:58:24] INFO     | MEDFLIGHT:info:80 | Database schema created/verified
+[2026-06-24 12:58:24] INFO     | MEDFLIGHT:info:80 | Database initialized at data\medflight.db
+[2026-06-24 12:58:24] INFO     | MEDFLIGHT:info:80 | Created sensor: AN/MPQ-64 Radar (RADAR_01)
+[2026-06-24 12:58:24] INFO     | MEDFLIGHT:info:80 | Created sensor: RF-3000 Scanner (RF_01)
+[2026-06-24 12:58:24] INFO     | MEDFLIGHT:info:80 | Created sensor: Audi Array M2K (ACOUSTIC_01)
+[2026-06-24 12:58:24] INFO     | MEDFLIGHT:info:80 | Created sensor: LRF-2200 Rangefinder (LRF_01)
+[2026-06-24 12:58:24] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-1 (CAM_EO_01)
+[2026-06-24 12:58:24] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-2 (CAM_IR_01)
+[2026-06-24 12:58:24] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-3 (CAM_EO_02)
+[2026-06-24 12:58:24] INFO     | MEDFLIGHT:info:80 | Created sensor: EO/IR Camera-4 (CAM_IR_02)
+[2026-06-24 12:58:24] INFO     | MEDFLIGHT:info:80 | Created sensor: YOLO AI Vision (YOLO_01)
+[2026-06-24 12:58:24] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0000 (DJI_MAVIC_3)
+[2026-06-24 12:58:24] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0001 (DJI_PHANTOM_4)
+[2026-06-24 12:58:24] INFO     | MEDFLIGHT:info:80 | New target detected: UAS-0002 (AUTEL_ROBOTICS)
+[2026-06-24 12:58:25] INFO     | MEDFLIGHT:info:80 | MED-FLIGHT C-UAS Detection System v2.4.0 initialized
+[2026-06-24 12:58:25] INFO     | MEDFLIGHT:info:80 | MED-FLIGHT C-UAS Detection System v2.4.0 started

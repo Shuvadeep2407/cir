@@ -1,0 +1,15 @@
+../Drivers/CMSIS/Include/core_cm0plus.h:741:22:__NVIC_EnableIRQ	2
+../Drivers/CMSIS/Include/core_cm0plus.h:779:22:__NVIC_DisableIRQ	2
+../Drivers/CMSIS/Include/core_cm0plus.h:850:22:__NVIC_SetPriority	2
+../Core/Src/gsm_driver.c:27:6:GSM_Init	1
+../Core/Src/gsm_driver.c:74:6:USART1_IRQHandler	4
+../Core/Src/gsm_driver.c:94:5:GSM_IsDataAvailable	1
+../Core/Src/gsm_driver.c:103:10:GSM_GetRxCount	2
+../Core/Src/gsm_driver.c:114:6:GSM_ClearRxBuffer	1
+../Core/Src/gsm_driver.c:125:6:GSM_SendData	3
+../Core/Src/gsm_driver.c:141:5:GSM_ReceiveData	5
+../Core/Src/gsm_driver.c:167:5:GSM_SendAT	5
+../Core/Src/gsm_driver.c:194:5:GSM_WaitResponse	6
+../Core/Src/gsm_driver.c:226:5:GSM_CheckNetwork	1
+../Core/Src/gsm_driver.c:238:5:GSM_SendPayload	3
+../Core/Src/gsm_driver.c:260:6:GSM_PowerOff	1

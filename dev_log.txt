@@ -1,0 +1,631 @@
+# ==============================
+#   🚁 C-UAS Development Log
+# ==============================
+
+## 1. Project Info
+- **Project:** C-UAS Training Aid Demo — Unmanned Aerial Detection System
+- **Last Updated:** 2026-06-28
+- **Total Budget:** 750,000 BDT (Base) + 250,000 BDT (Optional)
+- **Status:** Design phase — mechanical structure under review; quadpod mount concept selected for evaluation
+
+---
+
+## 2. Working Features / Current Status
+- Mechanical frame layout refined: 6-leg tripod tower with 1.0 m base height and 1.5 m 4-pod rotating level; simple diagram and device position map added; radar positions confirmed with detailed coordinates.
+- All project source files audited and cross-referenced against dev log: radar datasheet (CTLRR-220PRO), LRF manual (V3.1), budget overview (6 pages), and Amphenol SMA connector drawing (132134-10) all confirmed and logged.
+- Quadpod (4-leg) mount design evaluated: 4 concepts assessed (fixed wide base, foldable tactical, elevation mast quad, modular rapid deploy); Option 3 and Option 4 shortlisted for C-UAS trainer.
+- Surveying/instrument tripod options reviewed; SitePro ALQR20 dual-clamp aluminum tripod identified as top recommendation for field LRF and PTZ mounting.
+
+---
+
+## 3. Link / Connection Status
+- Mechanical frame tower -> 6-leg tripod base (1.0 m) -> 4-pod rotating disk/platform (1.5 m) -> 3× radar mini-tripods on rotating disk / fixed acoustic mounts / camera deck -> sensor placement
+- Device positions -> center 4-pod, 3 rotating tripods at 250 mm / 0-120-240 degrees, 3 fixed tripods at 200 mm / 60-180-300 degrees
+- mmWave radar modules -> CAN/CAN FD -> STM32WL or STM32F103 (radar gateway) --[LoRa wireless telemetry]--> AI workstation / operator console
+- Camera module -> IP / network link
+- LRF module -> UART TTL 3.3V / 2.5V link
+- Acoustic array -> STM32F411 custom circuit -> AI workstation / console
+- AC mains -> Digital X 1200VA Offline UPS -> integrated main-circuit power supply -> system loads
+
+---
+
+## 4. Decision Log
+| Date | Decision | Rationale | Status |
+|------|----------|-----------|--------|
+| 2026-06-27 | Adopted a 6-leg tripod tower with separated rotating radar disk (carrying 3× mini-tripod-mounted radars) and fixed acoustic layers | Keeps the sensor stack stable, reduces interference, and leaves a clear camera deck | Approved |
+| 2026-06-27 | Set mechanical frame heights to 1.0 m for the 6-leg tripod base and 1.5 m for the 4-pod rotating level | Provides a clear stacking reference for the tower and sensor carriage | Approved |
+| 2026-06-27 | Defined device positions around the frame center using a 250 mm rotating ring and a 200 mm fixed ring | Gives a repeatable placement map for the 4-pod center unit and the tripod mounts | Approved |
+| 2026-06-27 | Shortlisted quadpod Option 3 (elevation mast quad) and Option 4 (modular rapid deploy) for C-UAS mount platform | Best balance of FOV elevation, terrain adaptability, and payload capacity for the trainer prototype | Under review |
+| 2026-06-27 | Selected SitePro ALQR20 dual-clamp aluminum tripod as the field tripod recommendation for LRF and PTZ mounting | Dual-clamp locking prevents leg drift during continuous laser ranging; double-banded legs for stability on uneven ground | Recommended |
+| 2026-06-27 | Logged Amphenol Connex SMA surface mount jack (P/N 132134-10) as RF antenna connector reference | Drawing `13213410.PDF` found in project files but not previously referenced in dev log; likely for TBS MPM RF module antenna connection | Logged — verify fit |
+
+---
+
+## 5. Source & Resources
+- **Budget & Requirements:** `buget over look.pdf`
+- **Radar Module:** CTLRR-220PRO Long-range Millimeter-wave Radar — `CTLRR220PRO_Technology_datasheet20260619_23_23_24.pdf`
+- **Camera Module:** WSD N82020S(WIFI) zoom module camera — `cam mod ds.jpeg`
+- **IR Illuminator:** AOE-JC0623-111 850nm VCSEL LED night-vision illuminator — project note
+- **LRF:** Miniature Laser Ranging Module V3.1 — `lrf_ds.pdf`
+- **Acoustic Array:** INMP441-compatible omnidirectional microphone module + 200 mm parabolic reflector disk + STM32F411 custom circuit — project note
+- **RF Module:** TBS Multi Protocol Module (MPM) — project note
+- **RF Antenna Connector:** Amphenol Connex SMA Surface Mount Jack, P/N 132134-10 — `13213410.PDF` (engineering drawing; 8-pin brass body, Teflon insulator, gold-plated contact pin; 1/4-36UNS-2A thread; 7.11 x 7.11 mm PCB footprint)
+- **UPS:** Digital X 1200VA Offline UPS — https://www.startech.com.bd/digital-x-1200va-offline-ups
+- **AI Computing:** RTX 3050 6GB + Ryzen 5 2200G + 8GB RAM + 24-inch monitor — project note
+- **Mechanical Frame:** 6-leg tripod tower, rotating radar mounts, and camera deck layout — project note
+- **Field Tripod Reference:** SitePro ALQR20 Heavy-Duty Dual-Clamp Aluminum Tripod — https://cmusupply.com/equipment-power-tools/sitepro-heavy-duty-aluminum-tripod.html
+
+---
+
+## 6. Development Notes
+
+### System Architecture
+1. **Sensor Detection Subsystem** (400,000 BDT)
+   - mmWave Radar — 3× CTLRR-220PRO long-range millimeter-wave radar
+   - IR Zoom Camera — WSD N82020S(WIFI), 20x zoom module camera
+   - IR Illuminator — AOE-JC0623-111, 850nm VCSEL LED night-vision illuminator
+   - LRF — Miniature Laser Ranging Module V3.1, 2-2000 m TOF module
+   - Acoustic Detection Array — 8x INMP441-compatible omnidirectional microphone modules, 200 mm parabolic reflector disk, STM32F411 custom circuit
+   - RF Module — TBS MPM multi-protocol module, 2.4 GHz transmitter reference
+
+2. **AI Processing & Control** (120,000 BDT)
+   - AI Computing Workstation — RTX 3050 6GB + Ryzen 5 2200G + 8GB RAM + 24-inch monitor
+   - Radar Gateway / Microcontroller — STM32WL or STM32F103 with CAN bus and LoRa telemetry
+   - Storage & Interface — SSD, Communication Interface
+
+3. **Command & Monitoring Console** (20,000 BDT)
+   - Display Unit — 10" Industrial Display
+   - Operator Keyboard — Rugged Keyboard
+   - Joystick Controller — PTZ Control Joystick
+
+4. **Power & Communications** (30,000 BDT)
+   - Digital X 1200VA Offline UPS with AVR
+   - Integrated Power Supply / Main Circuit — regulated DC distribution
+   - Ethernet / Wi-Fi Communication Module
+
+5. **Mechanical Structure** (100,000 BDT)
+   - IP65 Weatherproof Enclosure
+   - 6-leg tripod tower base, 1.0 m height
+   - 3 individual radar mini-tripods (each holding one CTLRR-220PRO) on a rotating disk (4-pod platform, 1.5 m height)
+   - 3 fixed acoustic array mounts on a separate ring
+   - Main 4-pod rotating platform / disk for radar array rotation, 1.5 m height
+   - Fixed 4-pod layer holding the acoustic detection array, below the rotating disk
+   - 360-degree free-rotating camera and detector deck
+
+6. **Software Development & Integration** (80,000 BDT)
+   - AI Detection Software — YOLO-Based Drone Detection
+   - Dashboard & Logging Monitoring Interface
+   - Integration & Testing — System Calibration
+
+7. **Optional Subsystems** (250,000 BDT)
+   - RF Power Amplifier (Jammer Module) — per module
+   - Additional Radar Module
+   - GNSS Spoofer Module
+
+### Radar Module Details
+All radar details below are taken from `rader ds.pdf`.
+
+#### Product Introduction
+- **Model:** CTLRR-220PRO Long-range Millimeter-wave Radar
+- **Type:** 77 GHz long-range millimeter-wave radar
+- **Core Platform:** Integrated new-generation RFCMOS domestic SoC solution
+- **Primary Capability:** Measures distance, speed, and angle of target vehicles within 260 m in front of the vehicle
+- **Intended Functions:** FCW, AEB, and ACC support
+
+#### Radar Advantages
+- Integrating the latest-generation RFCMOS SoC
+- Long and medium-range detection mode
+- Support dual-channel CAN-FD
+- Support 40 tracking target outputs
+- Full vehicle-grade design
+- Support for applications such as FCW/AEB/ACC for medium and long-range use
+- Can be integrated with the visual ADAS system
+
+#### Radar Parameters
+| Item | Value |
+|------|-------|
+| Frequency range | 76 - 77 GHz |
+| Equivalent Radiated Power (ERIP) | <= 35 dBm |
+| Measurement range | 260 m |
+| Speed measurement range | -111 m/s to +55.5 m/s |
+| Horizontal | ±60° |
+| Vertical | ±15° |
+| Distance measurement accuracy | ±0.1 m |
+| Distance measurement accuracy (duplicate row in PDF) | 0.21 m to 0.5 m |
+| Horizontal angle accuracy | ±0.1° |
+| Horizontal angle resolution | 2.5° |
+| Pitch/roll angle accuracy | ±0.2° |
+| Speed measurement accuracy | ±0.03 m/s |
+| Speed resolution | 0.08 m/s |
+| Data interface | CAN / CAN FD |
+| Operating voltage | 9-16 V DC |
+| Overall power consumption | 2.5 W |
+| Size | L59 x W59 x H18.7 mm |
+| Weight | 75 g |
+| Waterproof rating | IP6K7 and IP6K9K |
+| Number of antenna channels | 4T4R |
+| Radar mode | FMCW |
+| Refresh rate | 50 ms |
+| Data model | Point Cloud / Track |
+| Point cloud quantity | 1024 |
+| Functional safety level | ASIL B |
+
+Note: the PDF repeats the "Distance measurement accuracy" label for the 0.21 m to 0.5 m row, so I preserved the value as listed.
+
+#### C-UAS Application Notes
+- **Detection radius:** 260 m (omnidirectional, 360° coverage) — each CTLRR-220PRO covers a ±60° sector; 3 units at 120° spacing achieve full-circle coverage with ~60° overlap between adjacent sectors.
+- **Radar subsystem power input:** 24 VDC — the system power bus supplies 24 VDC to each radar mounting point; an onboard regulator on the radar interface board steps 24 VDC down to the module's 9–16 V DC operating range.
+- **Command link:** LoRa wireless — each radar module connects via CAN/CAN FD to the local gateway (STM32WL or STM32F103), which relays track data to the AI workstation / operator console over a LoRa wireless telemetry link.
+
+#### Structural Dimensions
+- Overall size label: 59 x 59 x 18.7 mm
+- Front view labels: 74.4 mm overall width, 60.4 mm inner width, 82 mm overall height, 73 mm body height
+- Side view labels: 34.65 mm and 18.7 mm thickness
+- Top view labels: 59.57 mm overall width and 59 mm body width
+- Mounting holes: 3 x 5.4 mm
+
+#### Interface Definition
+| Pin | Signal | Function |
+|-----|--------|----------|
+| 1 | KL15 | Positive terminal of power supply |
+| 2 | CAN1-H | CAN1 high (connected to the high voltage CAN of the vehicle) |
+| 3 | CAN1-L | CAN1 low (connected to the low voltage CAN of the vehicle) |
+| 4 | GND | Power ground |
+| 5 | CAN2-H | CAN2 high (connected to the high voltage CAN of the MPC) |
+| 6 | CAN2-L | CAN2 low (connected to the low voltage CAN of the MPC) |
+| 7 | NC | Reserve |
+| 8 | NC | Reserve |
+
+- Connector: 8-pin TYCO waterproof vehicle connector
+- Connector model: 1-1719393-1
+
+### Camera Module Details
+All camera details below are taken from `cam mod ds.jpeg`.
+
+#### Product Introduction
+- **Model:** N82020S(WIFI)
+- **Brand:** WSD
+- **Type:** IP camera / zoom module camera
+- **Resolution:** 1920x1080
+- **Zoom:** 20x zoom module camera
+- **Connectivity:** IP camera, network YES
+- **Video compression:** H.265 / H.264
+- **Image sensor:** 1/2.8 inch CMOS IMX307
+- **Frame rate:** 1920x1080 at 25 fps / 30 fps
+- **Electronic shutter:** 1/1 to 1/30000 s
+- **Scanning system:** Progressive scan
+- **Day/night switch:** Built-in IR-CUT filter (standard)
+- **Minimum illumination:** Color 0.05 Lux @ F1.6; B/W 0.005 Lux @ F1.6
+- **SNR:** >50 dB (AGC off, Weight ON)
+- **Aperture control:** Auto
+- **Signal system:** PAL/NTSC
+- **Size / dimension:** 57.5x50x60 mm
+- **Technology:** AA Process
+- **Place of origin:** Guangdong, China
+
+#### IR Illuminator Details
+- **Model:** AOE-JC0623-111
+- **Power:** 60W
+- **Voltage:** 220V
+- **Wavelength:** 850nm
+- **Emitter:** 20 pcs 3W VCSEL LED
+- **Beam angle options:** 5 deg / 7 deg / 10 deg / 15 deg / 30 deg
+- **Size:** 165x130x130 mm
+- **Protection:** IP65
+- **Illumination distance:** 200-1000 m
+- **Recommended practical illumination distance:** 500-800 m
+- **Recommended lenses:** 7 deg or 10 deg
+- **Use:** Camera IR light illuminator for night vision
+
+### LRF Module Details
+All LRF details below are taken from `lrf ds.pdf`.
+
+#### Product Overview
+- **Model:** Miniature Laser Ranging Module V3.1
+- **Principle:** TOF (Time of Flight)
+- **Range:** 2-2000 m
+- **Interface:** UART (TTL_3.3V/2.5V compatible)
+- **Connector model:** FWF08002-S06B13W5M (TXGA Connector)
+- **Packing list:** Laser Ranging Module x1, Power Cable x1
+
+#### Technical Parameters
+- **Eye safety:** Class 1 (IEC 60825-1)
+- **Wavelength:** 905 +/- 10 nm
+- **Divergence:** 2.5 x 5 mrad
+- **Receive FOV:** ~8 mrad
+- **Max range:** >=2000 m @ 60% reflectivity, building target; >=1400 m @ 30% reflectivity, 2.3 x 2.3 m target; >=1000 m @ 30% reflectivity, 0.5 x 1.7 m target; >=500 m @ 30% reflectivity, 0.2 x 0.3 m target
+- **Min range:** 2 m
+- **Ranging accuracy:** d <= 800 m: +/- (0.4 m + d x 0.07%) m; d > 800 m: +/- 1 m
+- **Frequency:** 1-5 Hz (adaptive)
+- **Detection probability:** >=98%
+- **False alarm rate:** <=1%
+- **Power supply:** DC 3-5 V
+- **Standby power:** <=0.5 mW (power on pull down), <=0.3 W (power on pull up)
+- **Operating power (+5Vin):** <=0.70 W @ 25C; <=0.75 W @ 70C; <=0.6 W @ -20C
+- **Startup time:** <=200 ms
+- **Weight:** 10.5 +/- 0.5 g
+- **Dimensions:** 26 x 25 x 14 mm (L x W x H)
+- **Shock resistance:** 1200 g, 1 ms
+- **Vibration resistance:** 5~50~5 Hz, 1 octave/min, 2.5 g
+- **Operating temp:** -20 to +70 C
+- **Storage temp:** -25 to +75 C
+- **Reliability:** MTBF >=1500 h
+
+#### Interface Definition
+| Pin | Signal | Function |
+|-----|--------|----------|
+| 1 | POWER_ON | Module power switch, TTL 3.3V level |
+| 2 | UART_RX | Serial port receive terminal, TTL 3.3V level |
+| 3 | UART_TX | Serial port transmit terminal, TTL 3.3V level |
+| 4 | NC | Not connected |
+| 5 | Power Positive | Power supply 3-5 V |
+| 6 | GND | Serial port ground |
+
+### Acoustic Array Details
+The acoustic array is recorded as a custom 8-channel passive direction-finding subsystem based on INMP441-compatible omnidirectional microphone modules.
+
+#### Product Introduction
+- **Module:** INMP441-compatible omnidirectional microphone module
+- **Array:** 8 microphones, 8-direction coverage
+- **Reflector:** 200 mm parabolic reflector disk
+- **Processing Circuit:** STM32F411 custom circuit
+- **Purpose:** Passive acoustic cueing and bearing estimation for drone detection
+- **Status:** Detection range and beamforming performance still need field validation
+
+### System Integration Notes
+- Each mmWave radar module should connect to the local gateway over CAN/CAN FD.
+- Preferred gateway options are STM32WL or STM32F103, with LoRa used for telemetry backhaul when needed.
+- Radar track data can then be forwarded from the gateway to the AI workstation and operator console for logging and display.
+- Acoustic array output should be processed by the STM32F411 custom circuit and forwarded to the AI workstation and operator console for display and logging.
+
+### RF Module Details
+The reference provided for this entry describes a TBS Multi Protocol Module (MPM), which is a 2.4 GHz multi-protocol transmitter module rather than a passive RF detector. It is recorded here as the RF module reference for the project.
+
+#### Product Introduction
+- **Model:** TBS Multi Protocol Module (MPM)
+- **Purpose:** Multi-protocol RC transmitter module
+- **Compatibility:** OpenTX and FreedomTX
+- **Supported radios:** TBS Tango 2, X-Lite, and X9 Lite (adapter required for X9 Lite)
+- **Integrated chipsets:** CC2500, NRF24L01, A7105, CYRF6936
+- **Amplifier:** Integrated RF amplifier
+- **Main chipset:** STM32
+- **Firmware:** Upgradable via USB-C
+
+#### Key Features
+- Multi-protocol support for RC systems
+- Integrated RF amplifier for stronger range and signal quality
+- OpenTX and FreedomTX compatibility
+- Firmware updatable through USB-C
+
+#### Technical Specifications
+- **Input voltage:** 6-9 V
+- **Current consumption:** ~100 mA
+- **Operating frequency:** 2.4 GHz ISM band
+- **RF power output:** +20 dBm (100 mW)
+
+#### Package Contents
+- 1x TBS MPM Multi Protocol Module
+
+### Power System Details
+All power details below are based on the Digital X 1200VA Offline UPS reference.
+| 2026-06-28 | 2026-06-28 11:17:00 +06 | 2026-06-28 11:19:00 +06 | Created UI/dev_website.html as development SOP website based on dev_log.txt content; embedded rp.png (radar position), 2.png (full system position), and 1.png (radar + acoustic position) diagrams | Completed | None |
+
+#### UPS Overview
+- **Model:** Digital X 1200VA Offline UPS
+- **Automatic Voltage Regulator:** Yes
+- **Capacity:** 1200VA
+- **Load capacity:** 600W
+- **Frequency:** 50-60Hz
+- **Input voltage:** 85-135V
+- **Output voltage:** 100-220V
+- **Battery:** 2 x 12V, 7AH
+- **Backup time:** 15-40 minutes
+- **Warranty:** 1 year
+
+#### Power Integration
+- The power supply is integrated into the main circuit for regulated distribution after the UPS stage.
+- AC input should first pass through the UPS, then feed the integrated main-circuit power section.
+
+### Mechanical Frame Details
+- Tower style: 6-leg tripod frame for stability and wind load handling.
+- Base height: 1.0 m for the tripod platform.
+- Rotating deck height: 1.5 m for the 4-pod sensor carriage.
+- Radar mounts: 3 individual mini-tripods, each holding one CTLRR-220PRO radar module, mounted on a rotating disk (4-pod platform at 1.5 m height).
+- Acoustic mounts: 3 fixed positions for acoustic detection array sections.
+- Main hub: 4-pod rotating carrier for the primary sensor payload.
+- Lower fixed layer: 4-pod fixed holder for acoustic detection hardware.
+- Upper layer: 360-degree free-rotating disc with camera apertures and front-detector openings.
+- Status: concept stage; exact dimensions, bearing load, and cable routing still need CAD and balance verification.
+
+### Quadpod Mount Design Concepts
+Four quadpod (4-leg) design options were evaluated on 2026-06-27 as an upgrade path from the current tripod configuration.
+
+| Option | Description | Stability | Portability | Height Adj. | Best For |
+|--------|-------------|-----------|-------------|-------------|----------|
+| v2.5    | 2026-06-28 | Created UI/dev_website.html as interactive development SOP website with embedded diagrams (rp.png, 2.png, 1.png) covering all sections: project overview, working features, connections, decisions, architecture, radar, camera, LRF, acoustic, RF, power, mechanical, quadpod, positions, pending tasks, and specs summary
+| 1 — Fixed wide base | Wide-splay legs, cross brace, IP66 feet; ~1.5 m spread, load >30 kg | ★★★★★ | ★★☆☆☆ | No | Demo / static site |
+| 2 — Foldable tactical | Single central hinge; folds to ~80 cm tube; aluminium 6061; deploy <3 min | ★★★☆☆ | ★★★★★ | No | Field trials |
+| 3 — Elevation mast quad | Adjustable center mast 1.0–2.0 m; legs splay from mid-mast ring; wide FOV | ★★★★☆ | ★★★☆☆ | Yes (1–2 m) | Elevated sensor FOV |
+| 4 — Modular rapid deploy | 3-piece screw-lock leg sections; swappable feet (spikes / rubber); rail slots for cable mgmt | ★★★★☆ | ★★★★☆ | Partial | Multi-terrain, expandable |
+
+**Shortlisted: Option 3 and Option 4.** Option 3 for scenarios requiring elevated FOV; Option 4 for multi-terrain field deployment.
+- Status: under review — final selection pending CAD verification of payload load rating vs. combined sensor weight.
+
+### Field Tripod Recommendation
+For standalone LRF and PTZ camera mounting during field tests (separate from the main tower platform):
+
+| Rank | Model | Key Features | Use Case |
+|------|-------|-------------|----------|
+| 1st | SitePro ALQR20 Dual-Clamp Heavy-Duty Aluminum | Double-banded legs, positive dual-locking clamps, 5/8-11 flat head, powder-coated hardware, replaceable hardened steel shoe points | LRF / PTZ field mounting — dual clamp prevents leg drift during continuous laser ranging |
+| 2nd | CST/Berger 60-ALQRI20 | Open 165 cm / closed 107 cm, 5/8-11 flat head, lightweight heavy-gauge aluminum | Budget fallback for theodolite or LRF |
+| 3rd | Topcon TP-15 Wood/Fiberglass | Wood/fiberglass for better vibration damping; good for fixed/semi-permanent setups | Fixed or semi-permanent site installation |
+
+### LRF UART Protocol Note
+The LRF manual (`lrf_ds.pdf`, V3.1) contains a full software protocol section (Section 4) covering UART data packet format and ranging commands — **not yet captured in this dev log.** This will be needed when integrating the LRF with the STM32F411 or MCU. Key points to extract before integration:
+- Section 4.1: Protocol format and data packet structure
+- Section 4.2: Ranging command set
+- Interface: UART TTL_3.3V, 6-pin connector (TXGA FWF08002-S06B13W5M)
+- Status: **TODO — extract and log protocol details before MCU integration begins.**
+
+### Amphenol SMA Connector Reference
+Engineering drawing `13213410.PDF` found in project files — not previously referenced in dev log.
+- **Part:** Amphenol Connex SMA Surface Mount Jack
+- **Part number:** 132134-10
+- **Drawing number:** 132134-10.DWG (CAD file: C:/132/132134-10.DWG)
+- **Revision:** NC, initial release 11/25/02
+- **Body:** Brass
+- **Insulator:** Teflon (natural finish)
+- **Contact pin:** BeCu, gold plated
+- **Thread:** 1/4-36UNS-2A
+- **PCB footprint:** 7.11 x 7.11 mm (square), 4x 1.59 mm mounting holes
+- **Likely use:** RF antenna connection for TBS MPM 2.4 GHz module — verify fit before procurement.
+
+### Device Position Map
+- Reference angle: 0 degrees faces the reader/front side.
+- Center position: 1x 4-pod unit at the frame center.
+- Rotating disk (4-pod platform at 1.5 m): supports 3 individual mini-tripods at 250 mm radial offset, spaced at 0, 120, and 240 degrees — each mini-tripod holds one CTLRR-220PRO radar module.
+- Fixed ring: 3 tripod positions at 200 mm radial offset, starting at 60 degrees and spaced every 120 degrees.
+- Rotating disk use: radar mini-tripod mounts (disk rotates the entire radar array).
+- Fixed ring use: fixed support or acoustic tripod mounts.
+- Status: coordinate reference confirmed; final CAD hole pattern still needs tolerance verification.
+
+### Simple Mechanical Layout Diagram — Upgraded
+```text
+                           ▲ height
+                           │
+┌───── Camera / Detector Deck ─────┐
+│  [CAM]  [LRF]  [IR]   [RF ant.]  │  ← Top level
+└─────────┼──────┼──────┼──────────┘
+           │      │      │
+┌──────────┼──────┼──────┼──────────┐
+│ [ tripod Rotating Disk/Platform ]  │  ← 1 m
+│  [Mini-tripod #1, #2, #3] [LoRa]       │
+│  [Radar #1, #2, #3 — CTLRR-220]  │
+│  24V in / CAN/CAN FD             │
+└──────────┼──────┼──────┼──────────┘
+           │      │      │
+┌──────────┼──────┼──────┼──────────┐
+│ [ Fixed Acoustic Array Layer  tripod]    │  ← 1.2 m
+│  M1–M8 × INMP441 + STM32F411 [LoRa]          │
+└──────────┼────────────────────────┘
+           │
+┌──────────┼────────────────────────┐
+│ [ 3-Leg Tripod Base Platform ]    │  ← 1.0 m
+│ L1  L2  L3  L4  L5  L6           │
+└══════════╧════════════════════════╛
+         [ Ground / Foundation ]
+           │
+┌──────────┼────────────────────────┐
+│ [ Power & Communications Cabinet ]│
+│ Digital X UPS → AC→24V PSU       │
+│ STM32WL Gateway ──[Ethernet]──►Console│
+│ AI Workstation (RTX 3050)         │
+└───────────────────────────────────┘
+
+```
+
+### Top View Position Sketch — Upgraded
+```text
+                           ▲
+                       [IR illuminator]    ← 850 nm VCSEL
+                      (AOE-JC0623-111)        on camera deck
+                           │
+            ┌──────────────┼──────────────┐
+            │   R1 (0°)    │  [CAM]       │
+            │ [Radar #1]   │  N82020S     │  ← Camera deck
+            │  ±60° FOV    │  20× zoom    │    (above rotating disk)
+            │   ╱───╲      │              │
+            │  ╱     ╲     │    [LRF]     │
+            │ ╱ R1    ╲    │    V3.1      │
+            │ ╲ FOV   ╱    │  2-2000 m    │
+            │  ╲     ╱     │              │
+            │   ╲───╱      │   [RF ant.]  │
+            │    overlap   │   SMA 132134-10
+            │   ╱───╲      │              │
+       F3   │  ╱     ╲     │   F1         │
+   (300°)───┼─╱ F3  ╲─────┼──(60°)──────►│
+   [Acoustic]╲ FOV ╱[CENTER 4-POD]╱──╲ [Acoustic]
+   INMP441   ╲   ╱   Main hub   ╱ F1 ╲  INMP441
+   cluster    ╲─╱              ╱  FOV ╲  cluster
+              /│\             ╱       ╲
+             / │ \   24V ───►╲         ╲
+            /  │  \   bus     ╲         ╲
+           /   │   \          ╲         ╲
+          /    │    \          ╲         ╲
+   ───────┼────┼────┼──────────┼──────────┼──────►
+   F2     │    │    │          │          │
+ (180°)───┘    │    │          │          │
+ [Acoustic]    │    │          │          │
+  cluster      │    │          │          │
+               │    │          │          │
+          [Radar #3]     [Radar #2]
+           R3 (240°)      R2 (120°)
+           ±60° FOV       ±60° FOV
+            ╲───╱          ╲───╱
+             ╲ ╱            ╲ ╱
+              V              V
+
+ ─── 250 mm rotating disk (radar mini-tripods)
+ ──· 200 mm fixed ring (acoustic clusters)
+
+ Legend:
+  R1,R2,R3  = CTLRR-220PRO radar modules (±60° FOV, 120° spacing)
+  F1,F2,F3  = Fixed acoustic clusters (8× INMP441 microphones)
+  [CAM]     = WSD N82020S(WIFI) 20× zoom camera
+  [LRF]     = Miniature Laser Ranging Module V3.1
+  [IR]      = AOE-JC0623-111 850 nm IR illuminator
+  [RF ant.] = Amphenol SMA 132134-10 (TBS MPM antenna)
+  24V bus   = DC power distribution to all radar positions
+  LoRa      = Wireless telemetry to AI workstation / console
+  overlap   = ~60° FOV overlap between adjacent radar pairs → 360° coverage
+```
+
+### Radar Positions — Detailed Coordinates
+Confirmed coordinate reference for the 3 radar modules on the rotating ring and the 3 acoustic positions on the fixed ring, calculated from the device position map above.
+
+#### Ring Geometry
+| Parameter | Rotating Ring (Radar) | Fixed Ring (Acoustic) |
+|-----------|----------------------|----------------------|
+| Radius | **250 mm** from center | **200 mm** from center |
+| Positions | 3 (0°, 120°, 240°) | 3 (60°, 180°, 300°) |
+| Purpose | 3× individual radar mini-tripods mounted on a rotating disk | Fixed acoustic / structural mounts |
+
+#### Cartesian Coordinates (relative to frame center, in mm)
+| Position | Angle | X (mm) | Y (mm) | Component |
+|----------|-------|--------|--------|-----------|
+| **R1** — Radar 1 | 0° | +250.0 | 0.0 | CTLRR-220PRO #1 |
+| **R2** — Radar 2 | 120° | −125.0 | +216.5 | CTLRR-220PRO #2 |
+| **R3** — Radar 3 | 240° | −125.0 | −216.5 | CTLRR-220PRO #3 |
+| C | Center | 0.0 | 0.0 | 4-pod main hub |
+| **F1** — Acoustic 1 | 60° | +100.0 | +173.2 | INMP441 cluster |
+| **F2** — Acoustic 2 | 180° | −200.0 | 0.0 | INMP441 cluster |
+| **F3** — Acoustic 3 | 300° | +100.0 | −173.2 | INMP441 cluster |
+
+#### Angular Separation Summary
+| Between | Angular Offset | Arc Distance |
+|---------|---------------|--------------|
+| R1 ↔ R2 | 120° | **523.6 mm** (on 250 mm radius) |
+| R2 ↔ R3 | 120° | **523.6 mm** |
+| R3 ↔ R1 | 120° | **523.6 mm** |
+| Radar ↔ nearest acoustic | 30° (e.g., R1 at 0° ↔ F1 at 60°) | **130.9 mm** (rotating ring) / ~**112 mm** (direct chord) |
+
+#### Coverage Notes
+- Each CTLRR-220PRO has **±60° horizontal FOV** → with 120° spacing, adjacent radar pairs overlap by **~60°**, providing **360° continuous azimuth coverage**.
+- The rotating disk (4-pod platform at 1.5 m height) carries all 3 radar mini-tripods and rotates the entire radar array for bearing adjustments.
+- Fixed acoustic ring at 200 mm radius stays stationary below the radar ring — no mechanical interference.
+- Status: coordinate reference confirmed; final CAD hole pattern still needs tolerance verification.
+
+### Technical Capabilities
+| Capability | Expected Performance |
+|------------|---------------------|
+| Radar Detection | 260 m |
+| Visual Identification (Day) | 1.2 km |
+| Visual Identification (Night) | 500-800 m (with IR illuminator) |
+| Acoustic Detection | TBD (validate in field test) |
+| RF Detection Range | TBD (passive detector not selected) |
+| Jamming Effective Range (2.4GHz) | 1500 m |
+| Laser Rangefinder | 2000 m |
+| Object Classification | High for visible targets |
+| Tracking Accuracy | ±10–15° |
+| Multi-Target Tracking | 20–30 Targets |
+| Update Rate | 10–30 Hz |
+| Operating Hours | 24/7 |
+| Power Requirement | 12–24 VDC |
+
+### Key Technical Specs
+- **Radar:** CTLRR-220PRO, FMCW mmWave, 76–77 GHz, 260 m measurement range, 4T4R, CAN/CAN FD, 2.5 W, 50 ms refresh
+- **Camera:** WSD N82020S(WIFI), 1920x1080, 20x zoom, 1/2.8 inch CMOS IMX307, H.265/H.264, IR-CUT, network IP camera
+- **IR Illuminator:** AOE-JC0623-111, 850nm VCSEL LED, 60W, 220V, IP65, 200-1000 m illumination
+- **LRF:** Miniature Laser Ranging Module V3.1, 2-2000 m TOF, UART TTL_3.3V, 905 +/- 10 nm, Class 1, 1-5 Hz adaptive
+- **Acoustic:** 8x INMP441-compatible omnidirectional microphone modules, 200 mm parabolic reflector disk, STM32F411 custom circuit, passive direction finding
+- **RF Module:** TBS MPM multi-protocol transmitter module, 2.4 GHz ISM band, 6-9 V input, ~100 mA, +20 dBm output, STM32, USB-C firmware updates
+- **UPS:** Digital X 1200VA Offline UPS, AVR, 1200VA/600W, 85-135V input, 100-220V output, 2x12V 7AH batteries, 15-40 min backup
+- **Power Supply:** Integrated main-circuit power supply and regulated DC distribution
+- **AI Workstation:** RTX 3050 6GB, Ryzen 5 2200G, 8GB RAM, 24-inch monitor
+- **C&C Console:** 15" LCD Touch, 1280×800, 4 Video Channels, Data Logging
+- **Power:** 220 VAC Input via UPS, integrated main-circuit PSU, 12/24 VDC Output, 15–40 min Backup, 80–150 W Consumption
+
+### System Performance Targets
+- Drone Detection: 100–500 m
+- Drone Classification: 85–95%
+- Multi-Target Tracking: 5–20 Targets
+- Detection Latency: <3 sec
+- Continuous Operation: 24/7
+- Weather Resistance: IP65
+- System Availability: >95%
+
+> **Note:** This system is a detection, tracking, and awareness trainer prototype. Designed for research, testing, and educational purposes.
+
+---
+
+## 7. Logging Instructions
+- This file is the single source of truth for future work, fixes, and modifications.
+- Record every new task here before starting it, and update it again when the task is finished, with the date, start time, end time, and any blocker or unfinished-work notes for both entries, especially if work is interrupted by a power cut or network problem so a future AI agent can continue.
+- For each change, note the date, what changed, why it changed, and the current status.
+- Keep the pending list current so unfinished work stays visible.
+
+### Work Completion Path
+1. Add the task to `Pending Tasks / Next Steps`.
+2. Make the change in the project files.
+3. Verify the result.
+4. Update `Working Features / Current Status`, `Link / Connection Status`, and `Decision Log` if needed.
+5. Mark the task as completed and add a `Version History` entry.
+
+### Task Log
+| Date | Start | End | Task | Status | Blocker / Unfinished Notes |
+|------|-------|-----|------|--------|----------------------------|
+| 2026-06-27 | 2026-06-27 21:28:12 +06 | 2026-06-27 21:29:42 +06 | Mechanical frame tower / tripod layout drafting | Completed | None |
+| 2026-06-27 | 2026-06-27 21:31:21 +06 | 2026-06-27 21:31:48 +06 | Mechanical frame height refinement to 1.0 m base and 1.5 m rotating level | Completed | None |
+| 2026-06-27 | 2026-06-27 21:33:43 +06 | 2026-06-27 21:34:29 +06 | Simple mechanical layout diagram for 6-leg tripod, fixed acoustic layer, and 1.5 m rotating sensor deck | Completed | None |
+| 2026-06-27 | 2026-06-27 21:39:30 +06 | 2026-06-27 21:40:25 +06 | Device position map for center 4-pod and tripod rings | Completed | None |
+| 2026-06-27 | — | — | Full project file audit: cross-referenced buget_over_look.pdf, lrf_ds.pdf, CTLRR220PRO datasheet, and 13213410.PDF against dev log | Completed | Gaps found: Amphenol SMA connector not previously logged; LRF UART protocol section not yet extracted |
+| 2026-06-27 | — | — | Quadpod 4-leg mount design concept evaluation (4 options) | Completed | Options 3 and 4 shortlisted; final selection pending CAD load verification |
+| 2026-06-27 | — | — | Field tripod research and recommendation for LRF / PTZ mounting | Completed | SitePro ALQR20 dual-clamp identified as top pick |
+| 2026-06-27 | — | — | Logged Amphenol Connex SMA jack (P/N 132134-10) from 13213410.PDF into Sources and Development Notes | Completed | None |
+| 2026-06-28 | — | — | Confirmed detailed radar positions with Cartesian coordinates, angular separation, and coverage notes in Device Position Map | Completed | Coordinate reference confirmed; final CAD hole pattern tolerance still pending |
+| 2026-06-28 | — | — | Added C-UAS Application Notes: radar detection radius 260 m omnidirectional, radar subsystem power input 24 VDC, and radar-to-command LoRa wireless link | Completed | None |
+| 2026-06-28 | — | — | Clarified radar mounting: each radar sits on its own mini-tripod, 3 mini-tripods mounted on a rotating disk (4-pod platform at 1.5 m); updated all mechanical descriptions, diagrams, and Device Position Map | Completed | None |
+| 2026-06-28 | — | — | Upgraded Simple Mechanical Layout Diagram and Top View Position Sketch with full system integration: power/comm cabinet, 24 VDC bus, camera deck sensors (LRF/IR/RF ant.), radar FOV overlap, acoustic array detail, LoRa links, and legend | Completed | None |
+
+---
+
+## 8. Pending Tasks / Next Steps
+- [ ] Extract LRF UART protocol details from `lrf_ds.pdf` Section 4 (packet format + ranging commands) and log before MCU integration.
+- [ ] Verify Amphenol Connex SMA jack (P/N 132134-10) PCB footprint compatibility with TBS MPM RF module antenna port.
+- [ ] Finalize quadpod mount selection (Option 3 vs Option 4) — run CAD load check against combined sensor payload weight.
+- [ ] Select passive RF detector module for budget line 1.5 (2400–2500 MHz, 100,000 BDT allocated) — currently TBD.
+- [ ] CAD verification: bearing load, leg spread, and cable routing for 6-leg tower base and 4-pod rotating platform.
+
+---
+
+## 9. Version History
+| Version | Date | Changes |
+|---------|------|---------|
+| v0.1    | 2026-06-27 | Initial dev log setup with requirements from budget overview |
+| v0.2    | 2026-06-27 | Corrected radar references to CTLRR-220PRO from `rader ds.pdf` and aligned radar specs |
+| v0.3    | 2026-06-27 | Added full CTLRR-220PRO radar datasheet details, dimensions, and interface definition |
+| v0.4    | 2026-06-27 | Added logging instructions and work completion path for future modifications |
+| v0.5    | 2026-06-27 | Added camera module, IR illuminator, and LRF details from `cam mod ds.jpeg` and `lrf ds.pdf` |
+| v0.6    | 2026-06-27 | Updated AI computing stack to RTX 3050 6GB + Ryzen 5 2200G + 8GB RAM + 24-inch monitor |
+| v0.7    | 2026-06-27 | Added TBS MPM RF module details and noted it is a transmitter reference, not a passive detector |
+| v0.8    | 2026-06-27 | Added radar system integration notes using STM32WL or STM32F103 with CAN and LoRa |
+| v0.9    | 2026-06-27 | Added INMP441-based acoustic array details with 200 mm reflector disk and STM32F411 custom circuit |
+| v1.0    | 2026-06-27 | Added Digital X 1200VA UPS details and integrated main-circuit power supply notes |
+| v1.1    | 2026-06-27 | Added mechanical frame tower / tripod layout with rotating radar mounts, fixed acoustic mounts, and 360-degree camera deck |
+| v1.2    | 2026-06-27 | Refined mechanical frame heights to a 1.0 m 6-leg tripod base and a 1.5 m 4-pod rotating level |
+| v1.3    | 2026-06-27 | Added a simple mechanical layout diagram for the tripod base, rotating sensor level, and acoustic layer |
+| v1.4    | 2026-06-27 | Added device position map for the center 4-pod unit and 3 rotating / 3 fixed tripod rings |
+| v1.5    | 2026-06-27 | Full project file audit: all 4 PDFs cross-referenced; gaps logged (Amphenol SMA connector, LRF protocol section) |
+| v1.6    | 2026-06-27 | Added quadpod 4-leg mount design evaluation with 4 concept options and comparison table; Options 3 and 4 shortlisted |
+| v1.7    | 2026-06-27 | Added field tripod research and recommendation (SitePro ALQR20 dual-clamp) for LRF / PTZ mounting |
+| v1.8    | 2026-06-27 | Logged Amphenol Connex SMA Surface Mount Jack P/N 132134-10 from 13213410.PDF into Sources and Development Notes |
+| v1.9    | 2026-06-27 | Added LRF UART protocol extraction as pending TODO; flagged Section 4 of lrf_ds.pdf for MCU integration prep |
+| v2.0    | 2026-06-27 | Updated Pending Tasks with 5 open action items; corrected radar datasheet filename in Sources |
+| v2.1    | 2026-06-28 | Added detailed Radar Positions section with Cartesian coordinates table, angular separation summary, and coverage notes in Device Position Map; updated Working Features and Device Position Map status |
+| v2.2    | 2026-06-28 | Added C-UAS Application Notes (detection radius 260 m omnidirectional, radar subsystem power input 24 VDC, radar-to-command LoRa wireless); updated Link/Connection Status to show LoRa telemetry link
+| v2.3    | 2026-06-28 | Clarified radar mounting arrangement: each CTLRR-220PRO on its own mini-tripod, 3 mini-tripods on a rotating disk (4-pod platform at 1.5 m); updated Mechanical Frame Details, Device Position Map, diagram, Link/Connection Status, Decision Log, and System Architecture
+| v2.4    | 2026-06-28 | Upgraded Simple Mechanical Layout Diagram and Top View Position Sketch: added full system integration showing camera deck sensors (LRF/IR/RF ant.), 24 VDC power bus, radar FOV overlap cones, acoustic array with STM32F411, Power & Communications Cabinet (UPS, gateway, AI workstation), LoRa wireless link legend
+| v2.5    | 2026-06-28 | Initialized circuit/sound/log.txt as the single source of truth for acoustic sensor circuit design; documented project info, current blank-KiCad status, link/connection status, pending tasks (13 items), and version history
+| v2.6    | 2026-06-28 | Updated circuit/sound/log.txt: switched acoustic MCU from STM32F411 to STM32F412RCT6; added I2S pinout table for 8x INMP441, flagged PB12/PB13 conflict between I2S2 and I2S4, updated Decision Log, Pending Tasks, and Blockers
+| v2.7    | 2026-06-28 | Updated circuit/sound/log.txt: power supply section placed on schematic (EUP3484A buck converter + 18 passives); documented full BOM table; flagged missing STM32F412RCT6 MCU and INMP441 mics; added power rail label mismatch blocker
+| v2.8    | 2026-06-28 | Updated circuit/sound/log.txt: resolved I2S2/I2S4 PB12/PB13 pin conflict via STM32CubeMX — remapped I2S2 to PB9/PB10, I2S3 WS to PA4; all 4 I2S buses now on unique pins; removed conflict blocker; added v0.5

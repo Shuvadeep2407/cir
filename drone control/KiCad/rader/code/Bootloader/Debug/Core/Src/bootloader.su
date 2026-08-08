@@ -1,0 +1,7 @@
+../Core/Src/bootloader.c:19:12:Bootloader_VerifyApplicationCRC	32	static
+../Core/Src/bootloader.c:117:23:Bootloader_GetSharedRAM	8	static
+../Core/Src/bootloader.c:126:5:Bootloader_ShouldStay	24	static
+../Core/Src/bootloader.c:182:5:Bootloader_VerifyApp	32	static
+../Core/Src/bootloader.c:213:6:Bootloader_JumpToApp	32	static,ignoring_inline_asm
+../Core/Src/bootloader.c:245:6:Bootloader_Main	24	static
+../Core/Src/bootloader.c:325:5:Bootloader_ProcessOTA	16	static

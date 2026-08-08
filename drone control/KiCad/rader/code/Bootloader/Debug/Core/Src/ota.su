@@ -1,0 +1,12 @@
+../Core/Src/ota.c:33:5:OTA_Init	16	static
+../Core/Src/ota.c:54:5:OTA_StartTransfer	40	static
+../Core/Src/ota.c:84:5:OTA_ReceiveChunk	40	static
+../Core/Src/ota.c:122:5:OTA_EndTransfer	24	static
+../Core/Src/ota.c:153:5:OTA_AbortTransfer	24	static
+../Core/Src/ota.c:170:5:OTA_ProcessPacket	32	static
+../Core/Src/ota.c:204:5:OTA_GetProgress	16	static
+../Core/Src/ota.c:215:13:OTA_GetState	8	static
+../Core/Src/ota.c:224:5:OTA_FlashFirmware	8	static
+../Core/Src/ota.c:234:5:OTA_VerifyFirmware	16	static
+../Core/Src/ota.c:250:5:OTA_ReceiveFromGSM	352	static
+../Core/Src/ota.c:321:5:OTA_ReceiveFromCAN	312	static
