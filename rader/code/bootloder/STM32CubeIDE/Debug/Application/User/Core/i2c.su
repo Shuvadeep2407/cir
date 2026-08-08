@@ -1,3 +1,0 @@
-E:/drone/c_uas/drone control/rader/code/bootloder/Core/Src/i2c.c:30:6:MX_I2C1_Init	8	static
-E:/drone/c_uas/drone control/rader/code/bootloder/Core/Src/i2c.c:73:6:HAL_I2C_MspInit	88	static
-E:/drone/c_uas/drone control/rader/code/bootloder/Core/Src/i2c.c:113:6:HAL_I2C_MspDeInit	16	static
