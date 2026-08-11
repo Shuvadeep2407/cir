@@ -1,0 +1,8 @@
+../Core/Src/main.c:67:13:DisplayNibble	1
+../Core/Src/main.c:78:13:boot	2
+../Core/Src/main.c:108:13:CC1101_Strobe	3
+../Core/Src/main.c:137:16:CC1101_ReadReg	3
+../Core/Src/main.c:169:13:Test_CC1101_Connection	4
+../Core/Src/main.c:202:5:main	1
+../Core/Src/main.c:249:6:SystemClock_Config	3
+../Core/Src/main.c:291:6:Error_Handler	1
