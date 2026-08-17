@@ -1,0 +1,10 @@
+../Core/Src/stepper.c:21:6:Stepper_Init	16	static
+../Core/Src/stepper.c:35:6:Stepper_Enable	8	static
+../Core/Src/stepper.c:41:6:Stepper_Disable	8	static
+../Core/Src/stepper.c:46:6:Stepper_SetDirection	16	static
+../Core/Src/stepper.c:55:6:Stepper_SetSpeed	32	static
+../Core/Src/stepper.c:84:6:Stepper_MoveTo	16	static
+../Core/Src/stepper.c:106:6:Stepper_Stop	8	static
+../Core/Src/stepper.c:116:9:Stepper_GetPosition	8	static
+../Core/Src/stepper.c:121:9:Stepper_IsMoving	8	static
+../Core/Src/stepper.c:129:6:HAL_TIM_PeriodElapsedCallback	32	static

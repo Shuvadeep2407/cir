@@ -1,0 +1,4 @@
+../Core/Src/gy271.c:10:16:WriteReg	32	static
+../Core/Src/gy271.c:20:6:HMC5883L_Init	8	static
+../Core/Src/gy271.c:34:9:HMC5883L_Test	32	static
+../Core/Src/gy271.c:49:6:HMC5883L_ReadXYZ	56	static

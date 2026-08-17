@@ -1,0 +1,12 @@
+../Core/Src/w5500.c:19:27:W5500_GetSpiHandle	4	static
+../Core/Src/w5500.c:23:13:W5500_Select	8	static
+../Core/Src/w5500.c:27:13:W5500_Deselect	8	static
+../Core/Src/w5500.c:31:6:W5500_Init	8	static
+../Core/Src/w5500.c:36:6:W5500_SetSpiBus	16	static
+../Core/Src/w5500.c:45:16:W5500_GetSpiBus	4	static
+../Core/Src/w5500.c:49:13:W5500_GetSpiBusName	4	static
+../Core/Src/w5500.c:53:9:W5500_TestConnection	8	static
+../Core/Src/w5500.c:57:9:W5500_ReadByte	24	static
+../Core/Src/w5500.c:74:6:W5500_WriteByte	24	static
+../Core/Src/w5500.c:88:6:W5500_ReadBurst	24	static
+../Core/Src/w5500.c:100:6:W5500_WriteBurst	24	static

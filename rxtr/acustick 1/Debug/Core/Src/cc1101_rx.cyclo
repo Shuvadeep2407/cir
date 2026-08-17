@@ -1,0 +1,11 @@
+../Core/Src/cc1101_rx.c:90:16:CC1101_WaitReady	3
+../Core/Src/cc1101_rx.c:107:13:CC1101_WriteReg	2
+../Core/Src/cc1101_rx.c:122:13:CC1101_WritePaTable	2
+../Core/Src/cc1101_rx.c:138:13:CC1101_Strobe	2
+../Core/Src/cc1101_rx.c:151:16:CC1101_ReadReg	2
+../Core/Src/cc1101_rx.c:169:16:CC1101_ReadFifoByte	1
+../Core/Src/cc1101_rx.c:177:13:CC1101_ReadFifoBurst	2
+../Core/Src/cc1101_rx.c:198:13:CC1101RX_Reset	1
+../Core/Src/cc1101_rx.c:215:6:CC1101RX_Init	1
+../Core/Src/cc1101_rx.c:277:15:CC1101_RssiToDbm	3
+../Core/Src/cc1101_rx.c:292:10:CC1101RX_Receive	15
